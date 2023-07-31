@@ -1,4 +1,4 @@
-/* :name = Update Customisation Bundle :description =
+/* :name = Update Customisation Bundle (v572) :description =
  *  Update OmegaT customisation from a remote repository
  *
  * @author:  Kos Ivantsov
