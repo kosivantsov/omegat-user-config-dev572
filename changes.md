@@ -1,10 +1,12 @@
 # OmegaT (v5.7.2-jre11) customization
 
-## Update 83_c0p (2023-07-27)
+## Update 83_csp (2023-07-31)
 
-* Config: Added custom tags for interpolated variables in YSC text files
 * Plugin: Updated OMT package plugin version to 1.7.1: `plugin-omt-package-1.7.1.jar`
 * Plugin: Updated Okapi filters plugin version to 1.13-1.45.0: `okapiFiltersForOmegaT-1.13-1.45.0.jar`
+* Script: Temporary customUrl set to v572 URL in both versions of `updateConfigBundle.groovy`
+* Config: Temporary customUrl set to v572 URL in `customisation.properties`
+* Config: Added custom tags for interpolated variables in YSC text files
 * Config: Updated OMT plugin configuration to pack as offline project
 
 ## Update 81_c0p (2023-05-15)
