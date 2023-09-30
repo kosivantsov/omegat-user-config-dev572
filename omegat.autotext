@@ -115,4 +115,7 @@
 \sub7	₇	subscript 7 (U+2087)
 \sub8	₈	subscript 8 (U+2088)
 \sub9	₉	subscript 9 (U+2089)
+\sube	ₑ	subscript e (U+2091)
 \subs	ₛ	subscript s (U+209B)
+\rarr	→	rightwards arrow (U+2192)
+\larr	←	leftwards arrow (U+2190)
