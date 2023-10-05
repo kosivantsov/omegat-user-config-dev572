@@ -22,10 +22,10 @@
     <ac_chartable_unique_custom_chars>true</ac_chartable_unique_custom_chars>
     <ac_chartable_use_custom_chars>true</ac_chartable_use_custom_chars>
     <ac_glossary_enabled>true</ac_glossary_enabled>
-    <ac_show_suggestions_automatically>false</ac_show_suggestions_automatically>
+    <ac_show_suggestions_automatically>true</ac_show_suggestions_automatically>
     <allow_auto_spellchecking>true</allow_auto_spellchecking>
-    <allow_history_completer>true</allow_history_completer>
-    <auto_save_interval>6000</auto_save_interval>
+    <allow_history_completer>false</allow_history_completer>
+    <auto_save_interval>120</auto_save_interval>
     <automatically_check_version>false</automatically_check_version>
     <dictionary_auto_search>false</dictionary_auto_search>
     <dictionary_fuzzy_matching>true</dictionary_fuzzy_matching>
@@ -46,7 +46,7 @@ ${targetText}</ext_tmx_match_template>
     <glossary_not_exact_match>false</glossary_not_exact_match>
     <glossary_replace_on_insert>true</glossary_replace_on_insert>
     <glossary_stemming>true</glossary_stemming>
-    <history_completer_prediction_enabled>true</history_completer_prediction_enabled>
+    <history_completer_prediction_enabled>false</history_completer_prediction_enabled>
     <loose_tag_ordering>false</loose_tag_ordering>
     <lt_bridgeType>NATIVE</lt_bridgeType>
     <lt_disabled>false</lt_disabled>
@@ -72,8 +72,8 @@ ${targetText}</ext_tmx_match_template>
     <sb_progress_mode>PERCENTAGE</sb_progress_mode>
     <screen_height>840</screen_height>
     <screen_width>929</screen_width>
-    <screen_x>2042</screen_x>
-    <screen_y>56</screen_y>
+    <screen_x>0</screen_x>
+    <screen_y>0</screen_y>
     <script_window_height>650</script_window_height>
     <script_window_width>1150</script_window_width>
     <script_window_x>50</script_window_x>
@@ -95,7 +95,7 @@ ${targetText}</ext_tmx_match_template>
     <search_window_back_to_initial_segment>false</search_window_back_to_initial_segment>
     <search_window_exclude_orphans>true</search_window_exclude_orphans>
     <search_window_file_names>true</search_window_file_names>
-    <segment_properties_notify_props>hasComment, hasNote, isAlt, isDup</segment_properties_notify_props>
+    <segment_properties_notify_props>comment, hasNote, isAlt, isDup</segment_properties_notify_props>
     <source_font>Dialog</source_font>
     <source_font_size>14</source_font_size>
     <source_lang>en</source_lang>

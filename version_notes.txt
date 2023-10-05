@@ -1,5 +1,11 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 85_c00 (2023-10-05)
+
+* Config: Updated auto-save interval (from 6000 to 120)
+* Config: Re-enabled autotext suggestions
+* Config: Enabled property notifications for comments
+
 ## Update 84_csp (2023-07-31)
 
 * Plugin: Updated OMT package plugin version to 1.7.1: `plugin-omt-package-1.7.1.jar`
