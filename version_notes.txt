@@ -9,7 +9,7 @@
 ## Update 84_csp (2023-07-31)
 
 * Plugin: Updated OMT package plugin version to 1.7.1: `plugin-omt-package-1.7.1.jar`
-* Plugin: Updated Okapi filters plugin version to 1.13-1.45.0: `okapiFiltersForOmegaT-1.13-1.45.0.jar`
+* Plugin: Updated Okapi filters plugin (patched version to include all new features up to version 1.13 without XLIFF tag bug in Okapi 1.45): `okapiFiltersForOmegaT-1.12-1.44.0-b6bf048-jre11.jar`
 * Script: Temporary customUrl set to v572 URL in both versions of `updateConfigBundle.groovy`
 * Config: Temporary customUrl set to v572 URL in `customisation.properties`
 * Config: Updated OMT plugin configuration to pack as offline project
