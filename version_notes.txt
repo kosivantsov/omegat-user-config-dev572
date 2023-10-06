@@ -1,5 +1,11 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 86_csp (2023-10-06)
+
+* Config: Include new config for updates from 5.7.1
+* Script: Include all scripts for updates from 5.7.1
+* Plugin: Include all plugins for updates from 5.7.1
+
 ## Update 85_c00 (2023-10-05)
 
 * Config: Updated auto-save interval (from 6000 to 120)
