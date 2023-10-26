@@ -115,5 +115,6 @@ ${targetText}</ext_tmx_match_template>
     <wf_noSourceText>true</wf_noSourceText>
     <hide_tagonly_segments>true</hide_tagonly_segments>
     <expr_tagonly_segments>^[\p{Zs}\u200C]*(&lt;/?[geb]\d/?&gt;[\p{Zs}\u200C]*)+$</expr_tagonly_segments>
+    <tags_valid_required>true</tags_valid_required>
   </preference>
 </omegat>
