@@ -1,5 +1,10 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 87_csp (2023-10-26)
+
+* Config: Updated OMT plugin configuration so as not to exclude zipped TMs when packing 
+* Enabled option to prevent committing target files if there are tag issues -- fingers crossed!
+
 ## Update 86_csp (2023-10-06)
 
 * Config: Include new config for updates from 5.7.1
