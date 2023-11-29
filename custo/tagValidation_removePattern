@@ -7,8 +7,10 @@
     # space
     |(?:&lt;)
     # or another opening angle bracket
-    |(/?(EMPTY|[bui]|sup|sub|strong|strike|small|ul|ol|li|a|em|br\s*/?|img|var|span|div|p|run\d|style|center)(\s+[^&gt;]+)?(?:&gt;))
+    |(/?(EMPTY|[bui]|sup|sub|strong|strike|small|ul|ol|li|a|em|br\s*/?|img|var|span|div|p|run\d|style|center)(\s+[^&;]+)?(?:&gt;))
     # or a html tag
+    |(?i:Programme \d+|Reading test language|Country \w|Country.(of test|specific( item)?)|ESCS (activity|item) \d+|ISCED (\d+|level \d(\.\d)?)|Language \d+\s*|National (adaptation|addition) \d+|Option \w|(School Science|(PISA reading )?Test language|Technical reference books|General, integrated,|Educational technology|Earth and space|Chinese|Combined class|English|Remedial English¹ lessons|Environmental Science)[^&;]*|[.…]+etc.?)(?:&gt;)
+    # or a forced adaptation https://regex101.com/r/YTMkyC/1
     |/?[a-z]\d+/?(?:&gt;)
     # or an omegat tag
   ).*?
