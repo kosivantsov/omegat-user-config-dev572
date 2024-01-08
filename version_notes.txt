@@ -3,6 +3,7 @@
 ## Update 88_cs0 (2024-01-08)
 
 * Script: Updated `pisa25trend.groovy` to unescape break elements also if they have attributes/classes
+* Script: Updated `pisa25trend.groovy` to replace mathematical alphanumerics 𝑎 𝑏 𝑐 𝘩 𝑙 𝑟 𝑤 𝑥 with the italicised regular letter.
 
 ## Update 87_csp (2023-10-26)
 
