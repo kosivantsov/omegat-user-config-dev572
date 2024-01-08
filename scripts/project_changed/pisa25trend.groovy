@@ -51,8 +51,16 @@ switch (eventType) {
 	case COMPILE:
 		dir = project.projectProperties.targetRoot
 		// restores ETS language codes
-		replacePair = [
-            [find: /&lt;br([^&]+)&gt;/, replacement: /<br$1>/]
+        replacePair = [
+            [find: /&lt;br([^&]+)&gt;/, replacement: /<br$1>/],
+            [find: /𝑎/, replacement: /<i>a<\/i>/],
+            [find: /𝑏/, replacement: /<i>b<\/i>/],
+            [find: /𝑐/, replacement: /<i>c<\/i>/],
+            [find: /𝘩/, replacement: /<i>h<\/i>/],
+            [find: /𝑙/, replacement: /<i>l<\/i>/],
+            [find: /𝑟/, replacement: /<i>r<\/i>/],
+            [find: /𝑤/, replacement: /<i>w<\/i>/],
+            [find: /𝑥/, replacement: /<i>x<\/i>/]
         ]
         break
     default:
