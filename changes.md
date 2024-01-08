@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 88_cs0 (2024-01-08)
+
+* Script: Updated `pisa25trend.groovy` to unescape break elements also if they have attributes/classes
+
 ## Update 87_csp (2023-10-26)
 
 * Config: Updated OMT plugin configuration so as not to exclude zipped TMs when packing 
