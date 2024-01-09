@@ -59,7 +59,7 @@ ${targetText}</ext_tmx_match_template>
     <mark_para_delimitation_text>— ¶ —————————————————————</mark_para_delimitation_text>
     <mark_untranslated_segments>true</mark_untranslated_segments>
     <mark_whitespace>true</mark_whitespace>
-    <most_recent_projects_size>10</most_recent_projects_size>
+    <most_recent_projects_size>100</most_recent_projects_size>
     <mt_auto_fetch>false</mt_auto_fetch>
     <notify_glossary_hits>true</notify_glossary_hits>
     <penalty_foreign_matches>30</penalty_foreign_matches>

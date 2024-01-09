@@ -1,5 +1,10 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 91_cs0 (2024-01-09)
+
+* Config: Expanded maximum number of recent projects to 100
+* Script: Updated `pisa25trend.groovy` to replace mathematical alphanumerics 𝑦 with the italicised regular letter.
+
 ## Update 90_cs0 (2024-01-08)
 
 * Script: Updated `pisa25trend.groovy` to unescape break elements also if they have attributes/classes

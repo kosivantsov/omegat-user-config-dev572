@@ -60,7 +60,8 @@ switch (eventType) {
             [find: /𝑙/, replacement: /<i>l<\/i>/],
             [find: /𝑟/, replacement: /<i>r<\/i>/],
             [find: /𝑤/, replacement: /<i>w<\/i>/],
-            [find: /𝑥/, replacement: /<i>x<\/i>/]
+            [find: /𝑥/, replacement: /<i>x<\/i>/],
+            [find: /𝑦/, replacement: /<i>y<\/i>/]
         ]
         break
     default:
