@@ -2,7 +2,6 @@ MainMenuShortcuts.properties
 plugins/index.php
 plugins/list_files.txt
 plugins/list_paths.txt
-plugins/omegat-bidimarkers-0.2.0-all.jar
 scripts/project_changed/container_assets.groovy
 scripts/container_assets.groovy
 scripts/project_changed/restore_files_order.groovy
@@ -11,6 +10,9 @@ scripts/restore_default_trans_cli.groovy
 scripts/clear_working_tm.groovy
 scripts/application_startup/customization_dev.groovy
 scripts/application_startup/customization.groovy
+scripts/application_startup/updateConfigBundle-572.groovy
+scripts/set_latest_translations.groovy
 assets/creds.txt
 assets/step.txt
 SHA1SUM
+plugins/omegat-bidimarkers-0.2.0-all.jar
