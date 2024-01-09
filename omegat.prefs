@@ -25,7 +25,7 @@
     <ac_show_suggestions_automatically>true</ac_show_suggestions_automatically>
     <allow_auto_spellchecking>true</allow_auto_spellchecking>
     <allow_history_completer>false</allow_history_completer>
-    <auto_save_interval>2</auto_save_interval>
+    <auto_save_interval>120</auto_save_interval>
     <automatically_check_version>false</automatically_check_version>
     <dictionary_auto_search>false</dictionary_auto_search>
     <dictionary_fuzzy_matching>true</dictionary_fuzzy_matching>
@@ -47,7 +47,7 @@ ${targetText}</ext_tmx_match_template>
     <glossary_replace_on_insert>true</glossary_replace_on_insert>
     <glossary_stemming>true</glossary_stemming>
     <history_completer_prediction_enabled>false</history_completer_prediction_enabled>
-    <loose_tag_ordering>false</loose_tag_ordering>
+    <loose_tag_ordering>true</loose_tag_ordering>
     <lt_bridgeType>NATIVE</lt_bridgeType>
     <lt_disabled>false</lt_disabled>
     <mark_autopopulated>true</mark_autopopulated>
@@ -116,5 +116,7 @@ ${targetText}</ext_tmx_match_template>
     <hide_tagonly_segments>true</hide_tagonly_segments>
     <expr_tagonly_segments>^[\p{Zs}\u200C]*(&lt;/?[xgeb]\d/?&gt;[\p{Zs}\u200C]*)+$</expr_tagonly_segments>
     <tags_valid_required>true</tags_valid_required>
+  <view_option_mod_info_template>Last edit by ${changedId} on ${changedDateShortCountry} at ${changedTimeCountry}</view_option_mod_info_template>
+    <view_option_mod_info_template_wo_date>Last edit by ${changedId}</view_option_mod_info_template_wo_date>
   </preference>
 </omegat>
