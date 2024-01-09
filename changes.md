@@ -1,9 +1,31 @@
 # OmegaT (v5.7.2-jre11) customization
 
-## Update 88_cs0 (2024-01-08)
+## Update 90_cs0 (2024-01-08)
 
 * Script: Updated `pisa25trend.groovy` to unescape break elements also if they have attributes/classes
 * Script: Updated `pisa25trend.groovy` to replace mathematical alphanumerics 𝑎 𝑏 𝑐 𝘩 𝑙 𝑟 𝑤 𝑥 with the italicised regular letter.
+
+## Update 89_csp (2023-12-15)
+
+* Config: Fixed auto-save internal, set now for 120 seconds (2 min) instead of 2 seconds
+* Config: Delete `scripts/application_startup/updateConfigBundle-572.groovy` included in last customization of 5.7.1
+* Script: Added /tm/auto/next as update tm folder in `set_latest_translations.groovy` (together with /tm/auto/prev) in pisa25 team projects
+* Script: Show dummy file missing error only if the project is not empty (it has batches) in `set_latest_translations.groovy`
+
+## Update 88_csp (2023-12-10)
+
+* Config: Updated flagged text pattern to allow segment-wide forced adaptations
+* Config: restored auto-save interval of 2 minutes
+* Config: updated tag-only expression
+* Config: added italic and bold mathematical Latin letters
+ script set latest
+* Config: translated tags now allowed to be in a different order
+* Config: updated modification info template (more concise)
+* Script: avoid dupicate auto-text shortcuts when updating config files
+* Script: go to next segment with translation from /tm/auto
+* Script: go to next segment with translation from /tm/enforce
+* Script: remove extraneous tags
+* Script: set latest translation (auto-populate based on recency)
 
 ## Update 87_csp (2023-10-26)
 
@@ -379,4 +401,4 @@
 * Shortcut issues fixed
 * Custom tags updated
 
-https://cat.capstan.be/OmegaT/index.php
+https://cat.capstan.be/OmegaT/v572/index.php
