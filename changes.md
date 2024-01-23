@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 92_cs0 (2024-01-23)
+
+* Script: Updated `pisa25trend.groovy` to replace self-closing span tags with paired tags.
+
 ## Update 91_cs0 (2024-01-09)
 
 * Config: Expanded maximum number of recent projects to 100
