@@ -1,8 +1,12 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 94_??? (????-??-??)
+
+* Script: Added script "Prune batch TMs" `prune_tmx_content_per_batch.groovy` to optimize batch transitions in PISA 2025
+
 ## Update 93_cs0 (2024-01-23)
 
-* Script: Added script `writeTMX4batch.groov` to optimize batch transitions in PISA 2025
+* Script: Added script `writeTMX4batch.groovy` to optimize batch transitions in PISA 2025
 
 ## Update 92_cs0 (2024-01-23)
 
