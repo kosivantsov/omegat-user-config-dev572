@@ -1,7 +1,8 @@
 # OmegaT (v5.7.2-jre11) customization
 
-## Update 94_??? (????-??-??)
+## Update 94_cs0 (2024-01-26)
 
+* Script: Fixed typo in in rule that expands self-closing span tags in script `pisa25trend.groovy`
 * Script: Added script "Prune batch TMs" `prune_tmx_content_per_batch.groovy` to optimize batch transitions in PISA 2025
 
 ## Update 93_cs0 (2024-01-23)
