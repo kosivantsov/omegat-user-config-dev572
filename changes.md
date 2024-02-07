@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 95_cs0 (2024-02-07)
+
+* Script: Updated `pisa25trend.groovy` to add more self-closing tags to the rule added in update 92.
+
 ## Update 94_cs0 (2024-01-26)
 
 * Script: Fixed typo in in rule that expands self-closing span tags in script `pisa25trend.groovy`
