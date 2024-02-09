@@ -51,8 +51,20 @@ switch (eventType) {
 	case COMPILE:
 		dir = project.projectProperties.targetRoot
 		// restores ETS language codes
-		replacePair = [
-            [find: /&lt;br\s*\/&gt;/, replacement: /<br \/>/]
+        replacePair = [
+            [find: /&lt;br([^&]+)&gt;/, replacement: /<br$1>/],
+            [find: /𝑎/, replacement: /<i>a<\/i>/],
+            [find: /𝑏/, replacement: /<i>b<\/i>/],
+            [find: /𝑐/, replacement: /<i>c<\/i>/],
+            [find: /𝘩/, replacement: /<i>h<\/i>/],
+            [find: /𝑙/, replacement: /<i>l<\/i>/],
+            [find: /𝑟/, replacement: /<i>r<\/i>/],
+            [find: /𝑤/, replacement: /<i>w<\/i>/],
+            [find: /𝑥/, replacement: /<i>x<\/i>/],
+            [find: /𝑦/, replacement: /<i>y<\/i>/],
+            [find: /<(span|div|p|li)([^>]*)\/>/, replacement: /<$1$2><\/$1>/]
+            // [find: /([=×]) π (×)/, replacement: /$1 <m:math xmlns:m="http:\/\/www.w3.org\/1998\/Math\/MathML"><m:semantics><m:mstyle displaystyle="true" scriptlevel="0"><m:mrow class="MJX-TeXAtom-ORD"><m:mi>π<\/m:mi><\/m:mrow><\/m:mstyle><m:annotation encoding="latex">\pi<\/m:annotation><\/m:semantics><\/m:math> $2/]
+            // [find: / π/, replacement: / <m:math xmlns:m="http:\/\/www.w3.org\/1998\/Math\/MathML"><m:semantics><m:mstyle displaystyle="true" scriptlevel="0"><m:mrow class="MJX-TeXAtom-ORD"><m:mi>π<\/m:mi><\/m:mrow><\/m:mstyle><m:annotation encoding="latex">\pi<\/m:annotation><\/m:semantics><\/m:math>/]
         ]
         break
     default:

@@ -47,7 +47,7 @@ ${targetText}</ext_tmx_match_template>
     <glossary_replace_on_insert>true</glossary_replace_on_insert>
     <glossary_stemming>true</glossary_stemming>
     <history_completer_prediction_enabled>false</history_completer_prediction_enabled>
-    <loose_tag_ordering>false</loose_tag_ordering>
+    <loose_tag_ordering>true</loose_tag_ordering>
     <lt_bridgeType>NATIVE</lt_bridgeType>
     <lt_disabled>false</lt_disabled>
     <mark_autopopulated>true</mark_autopopulated>
@@ -59,7 +59,7 @@ ${targetText}</ext_tmx_match_template>
     <mark_para_delimitation_text>— ¶ —————————————————————</mark_para_delimitation_text>
     <mark_untranslated_segments>true</mark_untranslated_segments>
     <mark_whitespace>true</mark_whitespace>
-    <most_recent_projects_size>10</most_recent_projects_size>
+    <most_recent_projects_size>100</most_recent_projects_size>
     <mt_auto_fetch>false</mt_auto_fetch>
     <notify_glossary_hits>true</notify_glossary_hits>
     <penalty_foreign_matches>30</penalty_foreign_matches>
@@ -114,6 +114,9 @@ ${targetText}</ext_tmx_match_template>
     <wf_insertBestMatch>false</wf_insertBestMatch>
     <wf_noSourceText>true</wf_noSourceText>
     <hide_tagonly_segments>true</hide_tagonly_segments>
-    <expr_tagonly_segments>^[\p{Zs}\u200C]*(&lt;/?[geb]\d/?&gt;[\p{Zs}\u200C]*)+$</expr_tagonly_segments>
+    <expr_tagonly_segments>^[\p{Zs}\u200C]*(&lt;/?[xgeb]\d/?&gt;[\p{Zs}\u200C]*)+$</expr_tagonly_segments>
+    <tags_valid_required>true</tags_valid_required>
+  <view_option_mod_info_template>Last edit by ${changedId} on ${changedDateShortCountry} at ${changedTimeCountry}</view_option_mod_info_template>
+    <view_option_mod_info_template_wo_date>Last edit by ${changedId}</view_option_mod_info_template_wo_date>
   </preference>
 </omegat>
