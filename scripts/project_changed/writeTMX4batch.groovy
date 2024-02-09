@@ -1,8 +1,9 @@
 /* :name = Write PISA batch TM :description = 
  *
  *  @author:    Kos Ivantsov
- *  @version:   0.1
+ *  @version:   0.2
  *  @creation:  2024.01.12
+ *  @update:    2024.02.09
  */
 
 import java.nio.file.Files
@@ -12,19 +13,29 @@ import org.omegat.util.TMXReader2
 import org.omegat.util.TMXWriter
 import static org.omegat.core.events.IProjectEventListener.PROJECT_CHANGE_TYPE.*
 
-// SAVE happens during COMPILE, otherwise the script runs only after COMPILE is complete
+
+//// CLI or GUI probing
+def echo
+def cli
+try {
+    mainWindow.statusLabel.getText()
+    echo = { k -> console.println(k.toString()) }
+    cli = false
+} catch(Exception e) {
+    echo = { k -> println("\n~~~ Script output ~~~\n" + k.toString() + "\n^^^^^^^^^^^^^^^^^^^^^\n") }
+    cli = true
+}
+
+//// SAVE happens during COMPILE, otherwise the script runs only after COMPILE is complete
 if (eventType == SAVE) {
-
-
     // abort if a team project is not opened
     props = project.projectProperties
     if (!props || !props.repositories) {
         final def title = "Write PISA batch TM"
         final def msg   = "No project opened or not a team project."
-        console.println("== ${title} ==")
-        console.println(msg)
+        echo("== ${title} ==")
+        echo(msg)
         // showMessageDialog(null, msg, title, INFORMATION_MESSAGE)
-        continueScript = false
         return
     }
 
@@ -33,23 +44,21 @@ if (eventType == SAVE) {
     if (!projName.startsWith("pisa_2025")) {
         final def title = "Write PISA batch TM"
         final def msg   = "This is not a PISA25 project."
-        console.println("== ${title} ==")
-        console.println(msg)
+        echo("== ${title} ==")
+        echo(msg)
         // showMessageDialog(null, msg, title, INFORMATION_MESSAGE)
-        continueScript = false
         return
     }
 
-    console.println("Generating batch TMX")
-    prop = project.getProjectProperties()
-    projectRoot = prop.projectRoot
-    sourceRoot = prop.sourceRoot
+    echo("Generating batch TMX")
+    projectRoot = props.projectRoot
+    sourceRoot = props.sourceRoot
     sourcePath = Path.of(sourceRoot)
-    targetRoot = prop.targetRoot
+    targetRoot = props.targetRoot
     targetPath = Path.of(targetRoot)
-    sourceLocale = prop.getSourceLanguage().toString()
-    targetLocale = prop.getTargetLanguage().toString()
-    if (prop.isSentenceSegmentingEnabled()) {
+    sourceLocale = props.getSourceLanguage().toString()
+    targetLocale = props.getTargetLanguage().toString()
+    if (props.isSentenceSegmentingEnabled()) {
         segmenting = TMXReader2.SEG_SENTENCE
     } else {
         segmenting = TMXReader2.SEG_PARAGRAPH
@@ -57,30 +66,33 @@ if (eventType == SAVE) {
     
     batches = []
     
-    // Check if the source folder exists and if it has any subfolders
-    if (Files.exists(sourcePath) && Files.isDirectory(sourcePath)) {
-        for (batch in sourcePath.toFile().listFiles()) {
-            if (batch.isDirectory()) {
-                batches.add(batch.name)
-            }
+    // Check if we have any subfolders
+    projectFiles = project.projectFiles
+    projectFileList = []
+    projectFiles.each { file ->
+        if (file.filePath =~ /(?i)xml$/) {
+            projectFileList.add(file.filePath)
         }
-    } else {
-        console.println("No source folder found")
-        return
     }
+    projectFileList.each { file -> 
+        dirName = file.split("[/\\\\]")
+        if (dirName.size() > 1) {
+            batches.add(dirName[0])
+        }
+    }
+    uniqBatchNames = new LinkedHashSet<>(batches)
+    batches = new ArrayList<>(uniqBatchNames)
     
     // If no subfolder were found, just exit
     if (batches.size() == 0) {
-        console.println("No batches in the source folder")
+        echo("No batches in the source folder")
         return
     }
     
     // Create output folder target/tasks
     outputPath = Path.of("${targetRoot}tasks")
     Files.createDirectories(outputPath)
-    
-    projectFiles = project.projectFiles
-    
+   
     // Collect all project files in each top-level subfolder
     batches.each {
         batchName = it.toString()
@@ -90,7 +102,7 @@ if (eventType == SAVE) {
         batchFiles = []
         translatedEntries = []
         projectFiles.each {
-            if (it.filePath.contains("${batchName}${File.separator}")) {
+            if (it.filePath.startsWith(batchName)) {
                 batchFiles.add(it)
             }
         }
@@ -162,6 +174,6 @@ if (eventType == SAVE) {
         // Output each batch to the respective TMX file
         new File(outputTMXName).write(outputTMXContents.toString(), "UTF-8")
     }
-    console.println("Batch TMX generated")
+    echo("Batch TMX generated")
     return
 }
