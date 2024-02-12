@@ -1,5 +1,11 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 96_cs0 (2024-02-12)
+
+* Script: Updated `pisa25trend.groovy` to add more self-closing tags to the rule added in update 92 (i.e. span|div|p|li|a|qh5:rt|sharedstimuli|strong|em|td|text|textarea|th).
+* Script: Updated `checkOMTversion.groovy` to improve handling the creation of batch TMs when batch folders have no files.
+* Script: Added `checkOMTversion.groovy` to check for the correct OmegaT version/hash in cApStAn projects (e.g. PISA, FLASH, etc.)
+
 ## Update 95_cs0 (2024-02-07)
 
 * Script: Updated `pisa25trend.groovy` to add more self-closing tags to the rule added in update 92.
