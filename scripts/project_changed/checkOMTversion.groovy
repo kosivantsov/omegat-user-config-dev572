@@ -1,8 +1,8 @@
 /* :name =   Check OmegaT version :description=
  * 
  * @author:  Kos Ivantsov
- * @date:    2024-02-11
- * @version: 0.1
+ * @date:    2024-02-12
+ * @version: 0.2
  */
 
 import java.awt.Desktop
@@ -14,20 +14,21 @@ import static org.omegat.gui.main.ProjectUICommands.*
 import static org.omegat.util.Platform.*
 
 
+reqVersion = "5.7.2"
+reqRevision = "a978d82ee"
+winURL="https://cat.capstan.be/OmegaT/exe/OmegaT_${reqVersion}_Windows_64_Signed.exe"
+macURL="https://cat.capstan.be/OmegaT/exe/OmegaT_${reqVersion}_Mac.zip"
+
 if (eventType == LOAD) {
-    reqVersion = "5.7.2"
-    reqRevision = "a978d82ee"
     title = "Check OmegaT version"
     openURL = false
-    winURL="https://cat.capstan.be/OmegaT/exe/OmegaT_5.7.2_Windows_64_Signed.exe"
-    macURL="https://cat.capstan.be/OmegaT/exe/OmegaT_5.7.2_Mac.zip"
     closeProject = false
     
     props = project.projectProperties
     projName = props ? props.projectName : null
     
-    if (!props || !projName.startsWith("pisa_2025")) {
-        msg = "No project opened or not a PISA project."
+    if (!props || !projName =~ /(?i)^pisa_2025|^Eurobarometer_FLASH/ ) {
+        msg = "No project opened or not a PISA/FLASH project."
         console.println("== ${title} ==")
         console.println(msg)
         //showMessageDialog(null, msg, title, INFORMATION_MESSAGE)
