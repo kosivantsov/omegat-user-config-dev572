@@ -15,7 +15,7 @@ import static org.omegat.util.Platform.*
 
 
 if (eventType == LOAD) {
-    reqVersion = "5.7.3"
+    reqVersion = "5.7.2"
     reqRevision = "a978d82ee"
     title = "Check OmegaT version"
     openURL = false
