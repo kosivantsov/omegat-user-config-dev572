@@ -102,7 +102,7 @@ ${targetText}</ext_tmx_match_template>
     <stat_counting_custom_tags>false</stat_counting_custom_tags>
     <stat_counting_protected_text>false</stat_counting_protected_text>
     <taas_lookup>false</taas_lookup>
-    <tagValidation_customPattern>&lt;/?(EMPTY|[bui]|sup|sub|strong|strike|small|ul|ol|li|a|em|br\s*/?|img|var|span|div|p|run\d|style|center)(\s+[^&lt;&gt;]+)??&gt;|^((PA|Q)\d[A-Z0-9]+)$|&amp;lt;br\s?/&amp;gt;|[▼►⇑●∠]|&amp;#x\w+?;|%s|(\{#.+?\}|\{@.*?\}|\{[A-Z_]+\}|\[[A-Z_]+\]|\^\w+\$)</tagValidation_customPattern>
+    <tagValidation_customPattern>&lt;/?(EMPTY|[bui]|sup|sub|strong|strike|small|ul|ol|li|a|em|br\s*/?|img|var|span|div|p|run\d|style|center)(\s+[^&lt;&gt;]+)??&gt;|^((PA|Q)\d[A-Z0-9]+)$|&amp;lt;br\s?/&amp;gt;|[▼►⇑●∠]|&amp;#x\w+?;|%s|(\{#.+?\}|\{@.*?\}|\{[A-Z_]+\}|\[[A-Z_]{2,}\]|\^\w+\$)</tagValidation_customPattern>
     <tagValidation_removePattern>(?:&lt;)(?!\s|(?:&lt;)|(/?(EMPTY|[bui]|sup|sub|strong|strike|small|ul|ol|li|a|em|br\s*/?|img|var|span|div|p|run\d|style|center)(\s+[^&gt;]+)?(?:&gt;))|/?[a-z]\d+/?(?:&gt;)).*?(?:&gt;)|(?:&lt;)[\w.-]+@[\w.-]+(?:&gt;)|###+|[xX]{3,}</tagValidation_removePattern>
     <theme_class_name>org.omegat.gui.theme.DefaultFlatTheme</theme_class_name>
     <tipoftheday_show_on_start>false</tipoftheday_show_on_start>

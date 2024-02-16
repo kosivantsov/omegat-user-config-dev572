@@ -39,7 +39,7 @@
   \{[A-Z_]+\}
   |
   # Upper case entities between [] (eg. [COUNTRY])
-  \[[A-Z_]+\]
+  \[[A-Z_]{2,}\]
   |
   # Interpolated variables in YSC text files, e.g. {ParticipantName} or {Participant Name}
   \{([A-Z][a-z]+\s?)+\}

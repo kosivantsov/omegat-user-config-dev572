@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 97_c?0 (?)
+
+* Config: Updated tag validation pattern to avoid locking `[A]`, `[B]` etc (with one letter only) but keep matching `[AB]`, `[ABC]`, etc.
+
 ## Update 96_cs0 (2024-02-12)
 
 * Script: Updated `pisa25trend.groovy` to add more self-closing tags to the rule added in update 92 (i.e. span|div|p|li|a|qh5:rt|sharedstimuli|strong|em|td|text|textarea|th).
