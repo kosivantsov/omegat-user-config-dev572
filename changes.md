@@ -3,7 +3,8 @@
 ## Update 97_c?0 (?)
 
 * Config: Updated tag validation pattern to avoid locking `[A]`, `[B]` etc (with one letter only) but keep matching `[AB]`, `[ABC]`, etc.
-* Script: Updated script `pisa25trend.groovy` to replace duplicated CR in EOL
+* Script: Updated `pisa25trend.groovy` to replace duplicated CR in EOL
+* Scritp: Updated `pisa25trend.groovy` to expand self-closing superscript and subscript tags
 
 ## Update 96_cs0 (2024-02-12)
 

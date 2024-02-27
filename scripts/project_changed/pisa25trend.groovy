@@ -63,7 +63,7 @@ switch (eventType) {
             [find: /𝑤/, replacement: /<i>w<\/i>/],
             [find: /𝑥/, replacement: /<i>x<\/i>/],
             [find: /𝑦/, replacement: /<i>y<\/i>/],
-            [find: /<(span|div|p|li|a|strong|em|td|textarea|th)([^>]*)\/>/, replacement: /<$1$2><\/$1>/]          
+            [find: /<(span|div|p|li|a|strong|em|td|textarea|th|sup|sub)([^>]*)\/>/, replacement: /<$1$2><\/$1>/]          
             // [find: /([=×]) π (×)/, replacement: /$1 <m:math xmlns:m="http:\/\/www.w3.org\/1998\/Math\/MathML"><m:semantics><m:mstyle displaystyle="true" scriptlevel="0"><m:mrow class="MJX-TeXAtom-ORD"><m:mi>π<\/m:mi><\/m:mrow><\/m:mstyle><m:annotation encoding="latex">\pi<\/m:annotation><\/m:semantics><\/m:math> $2/]
             // [find: / π/, replacement: / <m:math xmlns:m="http:\/\/www.w3.org\/1998\/Math\/MathML"><m:semantics><m:mstyle displaystyle="true" scriptlevel="0"><m:mrow class="MJX-TeXAtom-ORD"><m:mi>π<\/m:mi><\/m:mrow><\/m:mstyle><m:annotation encoding="latex">\pi<\/m:annotation><\/m:semantics><\/m:math>/]
         ]
