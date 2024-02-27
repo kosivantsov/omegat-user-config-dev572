@@ -10,7 +10,6 @@
 \lsquo	‘	left single quotation mark (U+2018)
 \x	×	multiplication symbol / vector product
 \times	×	multiplication symbol
-\nbsp	 	non-breaking space 
 \tm	™	trademark symbol
 \reg	®	registered (U+00AE)
 (tm)	™	trademark symbol
@@ -36,7 +35,10 @@
 \ndash	–	n-dash (U+2013)
 \mdash	—	m-dash (U+2014)
 \pi	π	mathematical pi letter
-\thinspace	 	thin space
+\nbsp	 	non-breaking space (U+00A0)
+\thinsp	 	thin space
+\zwnj	‌	zero-width non-joiner (U+200C)
+\zwsp	​	zero-width space (U+200B)
 \ellipsis	…	horizontal ellipsis
 \divided	÷	division
 \middot	·	 interpunct/interpoint/middle dot/middot/centered dot (multiplication / scalar product)
