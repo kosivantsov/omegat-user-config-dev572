@@ -52,7 +52,7 @@ switch (eventType) {
 		dir = project.projectProperties.targetRoot
 		// restores ETS language codes
         replacePair = [
-            [find: /\r\r+/, replacement: /\r/],
+            [find: /([\r])[\r]+/, replacement: /$1/],
             [find: /&lt;br([^&]+)&gt;/, replacement: /<br$1>/],
             [find: /𝑎/, replacement: /<i>a<\/i>/],
             [find: /𝑏/, replacement: /<i>b<\/i>/],
@@ -90,6 +90,7 @@ def options = [
 def replacer = {file ->
     console.println("Check in: file ${file}")
     String text = file.getText ENCODING
+    // String replaced = text.replaceAll("[\r]{2,}", "\r") # test well!
     String replaced = text
     replacePair.each {replaced = replaced.replaceAll it.find, it.replacement}
     if (text != replaced) {

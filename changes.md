@@ -1,9 +1,10 @@
 # OmegaT (v5.7.2-jre11) customization
 
-## Update 98_cs0 (??)
+## Update 98_cs0 (2024-02-27)
 
 * Script: Updated `checkOMTversion.groovy` to include YSC projects and close the project before informing the user.
-* Scritp: Updated `check_rules.groovy` to work without localization properties
+* Scritp: Updated `check_rules.groovy` to work without localization properties.
+* Script: Updated `pisa25trend.groovy` to fix the replacement pattern of duplicated CR in EOL
 
 ## Update 97_cs0 (2024-02-27)
 
