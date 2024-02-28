@@ -2,7 +2,8 @@
  * 
  * @author:  Kos Ivantsov
  * @date:    2024-02-12
- * @version: 0.2
+ * @version: 0.2.1
+ * @changed: Manuel 2024-02-20 -- fixed matching regex, changed order of actions (close, then prompt)
  */
 
 import java.awt.Desktop
@@ -27,7 +28,7 @@ if (eventType == LOAD) {
     props = project.projectProperties
     projName = props ? props.projectName : null
     
-    if (!props || !projName =~ /(?i)^pisa_2025|^Eurobarometer_FLASH/ ) {
+    if ((!props) || !(projName =~ /(?i)^(pisa_2025|Eurobarometer_FLASH|ysc_)/ )) {
         msg = "No project opened or not a PISA/FLASH project."
         console.println("== ${title} ==")
         console.println(msg)
@@ -36,21 +37,19 @@ if (eventType == LOAD) {
     }
     
     if (OStrings.VERSION != reqVersion || OStrings.REVISION != reqRevision) {
-        msg="OmegaT 5.7.2 built by cApStAn is required for PISA projects."
+        
+        // close the project, first of all
+        org.omegat.util.gui.UIThreadsUtil.executeInSwingThread { projectClose() }
+
+        // inform the user 
+        msg="OmegaT 5.7.2 built by cApStAn is required for PISA or cApStAn projects."
         console.println("== ${title} ==")
         console.println(msg)
         showMessageDialog null, msg, title, INFORMATION_MESSAGE
         openURL = true
-        closeProject = true
     } else {
         console.println("== ${title} ==")
         console.println("OmegaT version ${OStrings.VERSION} (${OStrings.REVISION})")
-    }
-    
-    if (closeProject) {
-        org.omegat.util.gui.UIThreadsUtil.executeInSwingThread {
-            projectClose()
-        }
     }
     
     if (openURL) {

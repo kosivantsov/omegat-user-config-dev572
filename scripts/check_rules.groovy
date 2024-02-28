@@ -6,7 +6,9 @@
  * @author  Kos Ivantsov
  * @author  Didier Briel
  * @date    2018-06-28
- * @version 0.7.4
+ * @latest  2024-19-01
+ *              can run without .properties file
+ * @version 0.7.5
  */
 
 // if FALSE only current file will be checked
@@ -65,47 +67,102 @@ targetLang = getLTLanguage(project.getProjectProperties().getTargetLanguage());
 sourceLt = null
 targetLt = null
 if (sourceLang != null) {
-	sourceLt = getLanguageToolInstance(sourceLang)
+    sourceLt = getLanguageToolInstance(sourceLang)
 }
 if (targetLang != null) {
-	targetLt = getLanguageToolInstance(targetLang)
+    targetLt = getLanguageToolInstance(targetLang)
 }
 if (sourceLt != null && targetLt != null) {
     bRules = getBiTextRules(sourceLang, targetLang);
 }
 
+//External resources hack (use hardcoded strings if .properties file isn't found)
+resBundle = { k,v ->
+    try {
+        v = res.getString(k)
+    }
+    catch (MissingResourceException e) {
+        v
+    }
+}
+//UI Strings
+name="QA Checks"
+description="A simple set of QA checks for current OmegaT project"
+title="Check Rules"
+noProjMsg="Please try again after you open a project."
+errors_count="Errors found: "
+segment="Segment"
+rule="Rule"
+targetLabel="Target"
+sourceLabel="Source"
+nameLanguageTools="LanguageTools Rules"
+nameLeadSpace="Whitespace - leading"
+nameTrailSpace="Whitespace - trailing"
+nameDoubleSpace="Doubled blanks"
+nameDoubleWords="Doubled words"
+nameTargetShorter="Target shorter"
+nameTargetLonger="Target longer"
+nameDiffPunctuation="Different punctuation"
+nameDiffStartCase="Different start case"
+nameEqualSourceTarget="Equal source & target"
+nameUntranslated="Untranslated segment"
+nameTagNumber="Tags - number"
+nameTagSpace="Tags - spaces"
+nameTagOrder="Tags - order"
+nameNumErr="Inconsistent numbers"
+nameSpellErr="Spelling errors(s)"
+checkWholeProjectLabel="Check whole project"
+checkLeadSpaceLabel="Check for leading whitespace"
+checkLanguageToolsLabel="Check LanguageTools rules"
+checkTrailSpaceLabel="Check for trailing whitespace"
+checkDoubleSpaceLabel="Check for doubled blanks"
+checkDoubleWordsLabel="Check for doubled words"
+checkTargetShorterLabel="Check for shorter target"
+checkTargetLongerLabel="Check for longer target"
+checkDiffPunctuationLabel="Check punctuation at segment end"
+checkDiffStartCaseLabel="Check start case"
+checkEqualSourceTargetLabel="Check for equal source & target"
+checkUntranslatedLabel="Check for untranslated segments"
+checkTagNumberLabel="Check number of tags"
+checkTagSpaceLabel="Check spaces around tags"
+checkTagOrderLabel="Check sequence of tags"
+checkNumErrLabel="Check for inconsistent numbers"
+checkSpellErrLabel="Check for segments with spelling errors"
+refresh="Refresh"
+// End of UI Strings
+
 checkLanguageTools = false
-nameLanguageTools = res.getString("nameLanguageTools")
+nameLanguageTools = resBundle("nameLanguageTools", nameLanguageTools)
 checkLeadSpace = true
-nameLeadSpace = res.getString("nameLeadSpace")
+nameLeadSpace = resBundle("nameLeadSpace", nameLeadSpace)
 checkTrailSpace = true
-nameTrailSpace = res.getString("nameTrailSpace")
+nameTrailSpace = resBundle("nameTrailSpace", nameTrailSpace)
 checkDoubleSpace = true
-nameDoubleSpace = res.getString("nameDoubleSpace")
+nameDoubleSpace = resBundle("nameDoubleSpace", nameDoubleSpace)
 checkDoubleWords = true
-nameDoubleWords = res.getString("nameDoubleWords")
+nameDoubleWords = resBundle("nameDoubleWords", nameDoubleWords)
 checkTargetShorter = true
-nameTargetShorter = res.getString("nameTargetShorter")
+nameTargetShorter = resBundle("nameTargetShorter", nameTargetShorter)
 checkTargetLonger = true
-nameTargetLonger = res.getString("nameTargetLonger")
+nameTargetLonger = resBundle("nameTargetLonger", nameTargetLonger)
 checkDiffPunctuation = true
-nameDiffPunctuation = res.getString("nameDiffPunctuation")
+nameDiffPunctuation = resBundle("nameDiffPunctuation", nameDiffPunctuation)
 checkDiffStartCase = true
-nameDiffStartCase = res.getString("nameDiffStartCase")
+nameDiffStartCase = resBundle("nameDiffStartCase", nameDiffStartCase)
 checkEqualSourceTarget = true
-nameEqualSourceTarget = res.getString("nameEqualSourceTarget")
+nameEqualSourceTarget = resBundle("nameEqualSourceTarget", nameEqualSourceTarget)
 checkUntranslated = true
-nameUntranslated = res.getString("nameUntranslated")
+nameUntranslated = resBundle("nameUntranslated", nameUntranslated)
 checkTagNumber = true
-nameTagNumber = res.getString("nameTagNumber")
+nameTagNumber = resBundle("nameTagNumber", nameTagNumber)
 checkTagSpace = true
-nameTagSpace = res.getString("nameTagSpace")
+nameTagSpace = resBundle("nameTagSpace", nameTagSpace)
 checkTagOrder = true
-nameTagOrder = res.getString("nameTagOrder")
+nameTagOrder = resBundle("nameTagOrder", nameTagOrder)
 checkNumErr = true
-nameNumErr = res.getString("nameNumErr")
+nameNumErr = resBundle("nameNumErr", nameNumErr)
 checkSpellErr = false
-nameSpellErr = res.getString("nameSpellErr")
+nameSpellErr = resBundle("nameSpellErr", nameSpellErr)
 
 
 /*
@@ -180,8 +237,8 @@ def segment_count
 
 def prop = project.projectProperties
 if (!prop) {
-    final def title = res.getString("title")
-    final def msg   = res.getString("noProjMsg")
+    final def title = resBundle("title", title)
+    final def msg   = resBundle("noProjMsg", noProjMsg)
     console.clear()
     console.println(title + "\n${"-"*15}\n" + msg)
     showMessageDialog null, msg, title, INFORMATION_MESSAGE
@@ -247,7 +304,7 @@ def QAcheck() {
     segment_count = 0
 
     console.clear()
-    console.println(res.getString("title")+"\n${'-'*15}");
+    console.println(resBundle("title", title)+"\n${'-'*15}");
     files = project.projectFiles
 
 
@@ -292,19 +349,19 @@ def QAcheck() {
             }
         }
     }
-    console.print("${'-'*15}\n" + res.getString("errors_count") + segment_count)
+    console.print("${'-'*15}\n" + resBundle("errors_count", errors_count) + segment_count)
 }
 
 
 def interfejs(locationxy = new Point(0, 0), width = 900, height = 550, scrollpos = 0, sortColumn = defaultSortColumn, sortOrderDescending = defaultSortOrderDescending) {
     def frame
-    frame = swing.frame(title: res.getString("title") + ". " + res.getString("errors_count") + segment_count, minimumSize: [width, height], pack: true, show: true) {
+    frame = swing.frame(title: resBundle("title", title) + ". " + resBundle("errors_count", errors_count) + segment_count, minimumSize: [width, height], pack: true, show: true) {
         def tab
         def skroll
         skroll = scrollPane {
             tab = table() {
                 tableModel(list: model.data) {
-                    propertyColumn(editable: true, header:res.getString("segment"), propertyName:'seg', minWidth: 80, maxWidth: 80, preferredWidth: 80,
+                    propertyColumn(editable: true, header:resBundle("segment", segment), propertyName:'seg', minWidth: 80, maxWidth: 80, preferredWidth: 80,
                         cellEditor: new TableCellEditor()
                         {
                             public void cancelCellEditing()                             {   }
@@ -334,9 +391,9 @@ def interfejs(locationxy = new Point(0, 0), width = 900, height = 550, scrollpos
                             }
                         }
                     )
-                    propertyColumn(editable: false, header:res.getString("rule"), propertyName:'rule', minWidth: 120, preferredWidth: 180)
-                    propertyColumn(editable: false, header:res.getString("target"), propertyName:'target', minWidth: 200, preferredWidth: 320)
-                    propertyColumn(editable: false, header:res.getString("source"), propertyName:'source', minWidth: 200, preferredWidth: 320)
+                    propertyColumn(editable: false, header:resBundle("rule", rule), propertyName:'rule', minWidth: 120, preferredWidth: 180)
+                    propertyColumn(editable: false, header:resBundle("target", targetLabel), propertyName:'target', minWidth: 200, preferredWidth: 320)
+                    propertyColumn(editable: false, header:resBundle("source", sourceLabel), propertyName:'source', minWidth: 200, preferredWidth: 320)
                 }
             }
             tab.getTableHeader().setReorderingAllowed(false);
@@ -353,19 +410,19 @@ def interfejs(locationxy = new Point(0, 0), width = 900, height = 550, scrollpos
         skroll.repaint();
         panel(constraints:BL.SOUTH) {
             gridBagLayout();
-            checkBox(text:res.getString("checkWholeProject"),
+            checkBox(text:resBundle("checkWholeProject", checkWholeProjectLabel),
                 selected: checkWholeProject,
                 actionPerformed: {
                     checkWholeProject = !checkWholeProject;
                 },
                 constraints:gbc(gridx:0, gridy:0, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkSpellErr"),
+            checkBox(text:resBundle("checkSpellErr", checkSpellErrLabel),
                 selected: checkSpellErr,
                 actionPerformed: {
                     checkSpellErr = !checkSpellErr;
                 },
                 constraints:gbc(gridx:0, gridy:1, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkLanguageTools"),
+            checkBox(text:resBundle("checkLanguageTools", checkLanguageToolsLabel),
                 selected: checkLanguageTools,
                 actionPerformed: {
                     checkLanguageTools = !checkLanguageTools;
@@ -373,43 +430,43 @@ def interfejs(locationxy = new Point(0, 0), width = 900, height = 550, scrollpos
                 constraints:gbc(gridx:0, gridy:2, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
 
 
-            checkBox(text:res.getString("checkLeadSpace"),
+            checkBox(text:resBundle("checkLeadSpace", checkLeadSpaceLabel),
                 selected: checkLeadSpace,
                 actionPerformed: {
                     checkLeadSpace = !checkLeadSpace;
                 },
                 constraints:gbc(gridx:1, gridy:0, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkTrailSpace"),
+            checkBox(text:resBundle("checkTrailSpace", checkTrailSpaceLabel),
                 selected: checkTrailSpace,
                 actionPerformed: {
                     checkTrailSpace = !checkTrailSpace;
                 },
                 constraints:gbc(gridx:1, gridy:1, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkDoubleSpace"),
+            checkBox(text:resBundle("checkDoubleSpace", checkDoubleSpaceLabel),
                 selected: checkDoubleSpace,
                 actionPerformed: {
                     checkDoubleSpace = !checkDoubleSpace;
                 },
                 constraints:gbc(gridx:1, gridy:2, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkDoubleWords"),
+            checkBox(text:resBundle("checkDoubleWords", checkDoubleWordsLabel),
                 selected: checkDoubleWords,
                 actionPerformed: {
                     checkDoubleWords = !checkDoubleWords;
                 },
                 constraints:gbc(gridx:1, gridy:3, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkDiffStartCase"),
+            checkBox(text:resBundle("checkDiffStartCase", checkDiffStartCaseLabel),
                 selected: checkDiffStartCase,
                 actionPerformed: {
                     checkDiffStartCase = !checkDiffStartCase;
                 },
                 constraints:gbc(gridx:1, gridy:4, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkDiffPunctuation"),
+            checkBox(text:resBundle("checkDiffPunctuation", checkDiffPunctuationLabel),
                 selected: checkDiffPunctuation,
                 actionPerformed: {
                     checkDiffPunctuation = !checkDiffPunctuation;
                 },
                 constraints:gbc(gridx:1, gridy:5, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkNumErr"),
+            checkBox(text:resBundle("checkNumErr", checkNumErrLabel),
                 selected: checkNumErr,
                 actionPerformed: {
                     checkNumErr = !checkNumErr;
@@ -417,43 +474,43 @@ def interfejs(locationxy = new Point(0, 0), width = 900, height = 550, scrollpos
                 constraints:gbc(gridx:1, gridy:6, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
 
 
-            checkBox(text:res.getString("checkTargetShorter"),
+            checkBox(text:resBundle("checkTargetShorter", checkTargetShorterLabel),
                 selected: checkTargetShorter,
                 actionPerformed: {
                     checkTargetShorter = !checkTargetShorter;
                 },
                 constraints:gbc(gridx:2, gridy:0, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkTargetLonger"),
+            checkBox(text:resBundle("checkTargetLonger", checkTargetLongerLabel),
                 selected: checkTargetLonger,
                 actionPerformed: {
                     checkTargetLonger = !checkTargetLonger;
                 },
                 constraints:gbc(gridx:2, gridy:1, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkEqualSourceTarget"),
+            checkBox(text:resBundle("checkEqualSourceTarget", checkEqualSourceTargetLabel),
                 selected: checkEqualSourceTarget,
                 actionPerformed: {
                     checkEqualSourceTarget = !checkEqualSourceTarget;
                 },
                 constraints:gbc(gridx:2, gridy:2, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkUntranslated"),
+            checkBox(text:resBundle("checkUntranslated", checkUntranslatedLabel),
                 selected: checkUntranslated,
                 actionPerformed: {
                     checkUntranslated = !checkUntranslated;
                 },
                 constraints:gbc(gridx:2, gridy:3, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkTagNumber"),
+            checkBox(text:resBundle("checkTagNumber", checkTagNumberLabel),
                 selected: checkTagNumber,
                 actionPerformed: {
                     checkTagNumber = !checkTagNumber;
                 },
                 constraints:gbc(gridx:2, gridy:4, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkTagSpace"),
+            checkBox(text:resBundle("checkTagSpace", checkTagSpaceLabel),
                 selected: checkTagSpace,
                 actionPerformed: {
                     checkTagSpace = !checkTagSpace;
                 },
                 constraints:gbc(gridx:2, gridy:5, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
-            checkBox(text:res.getString("checkTagOrder"),
+            checkBox(text:resBundle("checkTagOrder", checkTagOrderLabel),
                 selected: checkTagOrder,
                 actionPerformed: {
                     checkTagOrder = !checkTagOrder;
@@ -461,7 +518,7 @@ def interfejs(locationxy = new Point(0, 0), width = 900, height = 550, scrollpos
                 constraints:gbc(gridx:2, gridy:6, weightx: 0.5, fill:GridBagConstraints.HORIZONTAL, insets:[0,5,0,0]))
 
 
-            button(text:res.getString("refresh"),
+            button(text:resBundle("refresh", refresh),
                 actionPerformed: {
                     QAcheck();
                     locationxy = frame.getLocation();
