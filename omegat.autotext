@@ -39,6 +39,8 @@
 \thinsp	 	thin space
 \zwnj	‌	zero-width non-joiner (U+200C)
 \zwsp	​	zero-width space (U+200B)
+\zwj	‍	word joiner (U+2060)
+\wj	⁠	zero-width joiner (U+200D)
 \ellipsis	…	horizontal ellipsis
 \divided	÷	division
 \middot	·	 interpunct/interpoint/middle dot/middot/centered dot (multiplication / scalar product)

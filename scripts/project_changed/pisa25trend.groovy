@@ -90,7 +90,7 @@ def options = [
 def replacer = {file ->
     console.println("Check in: file ${file}")
     String text = file.getText ENCODING
-    // String replaced = text.replaceAll("[\r]{2,}", "\r") # test well!
+    // String replaced = text.replaceAll('\r\r+', '\r') // test well!
     String replaced = text
     replacePair.each {replaced = replaced.replaceAll it.find, it.replacement}
     if (text != replaced) {

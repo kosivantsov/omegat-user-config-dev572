@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 99_cs0 (?)
+
+* Config: Added autotext shortcuts for zero-width space and word joiner
+
 ## Update 98_cs0 (2024-02-28)
 
 * Script: Updated `checkOMTversion.groovy` to include YSC projects and close the project before informing the user.
