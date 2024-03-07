@@ -3,6 +3,8 @@
 ## Update 99_cs0 (?)
 
 * Config: Added autotext shortcuts for zero-width space and word joiner
+* Script: Added `utils_report_auto.groovy` to report matches coming from /tm/auto and /tm/enforce
+* Script: Added `utils_prune_recent.groovy` (run at startup) to clean up the list of recent projects
 
 ## Update 98_cs0 (2024-02-28)
 
