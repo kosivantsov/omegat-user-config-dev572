@@ -28,3 +28,23 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/capstanlqc/omegat-setup/
 ### macOS
 
 Please follow [this guide](https://capstanlqc.github.io/omegat-guides/translation/install-and-setup-macos/).
+
+## How to update this repository \[INTERNAL\]
+
+Between releases: 
+
+1. Add/update/remove whatever config/script/plugin files as needed
+2. Update the `changes.md` file with a description of the updates, under the next release header
+
+When a new release is ready: 
+
+3. Make sure the next update header has:
+
+	- a number that is correlatively higher in one unit to the previous update
+	- a correct `csp` indication of what exactly is being updated: 
+		- the first letter is mandatorily `c` (config)
+		- the second letter is `s` if there are updates in scripts, otherwise `0`
+		- the third letter is `p` if there are updates in plugins, otherwise `0`
+	- the date of the expected release
+
+Example: `## Update 98_cs0 (2024-02-28)`
