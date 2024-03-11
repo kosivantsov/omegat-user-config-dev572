@@ -5,6 +5,8 @@
 * Config: Added autotext shortcuts for zero-width space and word joiner
 * Script: Added `utils_report_auto.groovy` to report matches coming from /tm/auto and /tm/enforce
 * Script: Added `utils_prune_recent.groovy` (run at startup) to clean up the list of recent projects
+* Script: Added `trim_git_token.groovy` (run at startup) trim trailing spaces in aws passwords
+* Script: Added `delete_unneeded_linse.groovy` (run at startup) to remove all bold and bold/static math autotext entries
 
 ## Update 98_cs0 (2024-02-28)
 
