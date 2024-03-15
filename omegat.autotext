@@ -35,6 +35,11 @@
 \ndash	–	n-dash (U+2013)
 \mdash	—	m-dash (U+2014)
 \pi	π	mathematical pi letter
+\height	𝘩	height (geometry)
+\radius	𝑟	radius (geometry)
+\length	𝑙	length (geometry)
+\width	𝑤	width (geometry)
+\base	𝑏	base (geometry)
 \nbsp	 	non-breaking space (U+00A0)
 \thinsp	 	thin space
 \zwnj	‌	zero-width non-joiner (U+200C)
@@ -53,6 +58,7 @@
 \approx	≈	 approximately equal to
 \emptyset	∅	empty set
 \sqrt	√	square root (U+221A)
+\radic	√	square root (U+221A)
 \deg	°	degree
 \infty	∞	infinity
 \copyright	©	copyright symbol
