@@ -16,6 +16,7 @@
     <COLOR_TRANSTIPS>#0000ff</COLOR_TRANSTIPS>
     <COLOR_UNTRANSLATED>#c0c0ff</COLOR_UNTRANSLATED>
     <COLOR_WHITESPACE>#808080</COLOR_WHITESPACE>
+    <COLOR_SEGMENT_MARKER_FG>#cccccc</COLOR_SEGMENT_MARKER_FG>
     <ac_autotext_enabled>true</ac_autotext_enabled>
     <ac_chartable_custom_char_string>«»“”‘’„…€¢£$¥₩™®©²³ªº–—×÷·±≤≥≠≈√°∞µ½⅓¼⁄٠١٢٣٤٥٦٧٨٩</ac_chartable_custom_char_string>
     <ac_chartable_enabled>true</ac_chartable_enabled>
