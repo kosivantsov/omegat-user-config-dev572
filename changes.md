@@ -8,6 +8,7 @@
 * Script: Added `utils_prune_recent.groovy` (run at startup) to clean up the list of recent projects
 * Script: Added `trim_git_token.groovy` (run at startup) trim trailing spaces in aws passwords
 * Script: Added `delete_unneeded_linse.groovy` (run at startup) to remove all bold and bold/static math autotext entries
+* Script: Updated `pisa25trend.groovy` (experimentally) to add a replacement rule that restores `&gt;`
 
 ## Update 98_cs0 (2024-02-28)
 

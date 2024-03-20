@@ -52,6 +52,7 @@ switch (eventType) {
 		dir = project.projectProperties.targetRoot
 		// restores ETS language codes
         replacePair = [
+            [find: /&lt;([^&\n<>]+)>/, replacement: /&lt;$1&gt;/],
             [find: /([\r])[\r]+/, replacement: /$1/],
             [find: /&lt;br([^&]+)&gt;/, replacement: /<br$1>/],
             [find: /𝑎/, replacement: /<i>a<\/i>/],
