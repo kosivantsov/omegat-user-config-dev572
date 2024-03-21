@@ -1,13 +1,13 @@
 # OmegaT (v5.7.2-jre11) customization
 
-## Update 99_cs0 (?)
+## Update 99_cs0 (2024-03-21)
 
 * Config: Added autotext shortcuts for zero-width space and word joiner
 * Config: Added custom color (light grey) for segment marker
 * Script: Added `utils_report_auto.groovy` to report matches coming from /tm/auto and /tm/enforce
 * Script: Added `utils_prune_recent.groovy` (run at startup) to clean up the list of recent projects
 * Script: Added `trim_git_token.groovy` (run at startup) trim trailing spaces in aws passwords
-* Script: Added `delete_unneeded_linse.groovy` (run at startup) to remove all bold and bold/static math autotext entries
+* Script: Added `delete_unneeded_lines.groovy` (run at startup) to remove all bold and bold/static math autotext entries
 * Script: Updated `pisa25trend.groovy` (experimentally) to add a replacement rule that restores `&gt;`
 * Script: Updated `pisa25trend.groovy` to remove empty `<sup>`, `<sub>` tag pairs (remove = replace with \zwsp)
 
