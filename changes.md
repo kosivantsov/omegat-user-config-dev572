@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 100_cs0 (2024-03-22)
+
+* Script: Updated `writeTMX4batch.groovy` to include HTML files as well as XML, and ignore project name
+
 ## Update 99_cs0 (2024-03-21)
 
 * Config: Added autotext shortcuts for zero-width space and word joiner

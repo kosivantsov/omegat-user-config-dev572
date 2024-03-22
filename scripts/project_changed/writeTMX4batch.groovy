@@ -41,14 +41,14 @@ if (eventType == SAVE) {
 
     // abort if the team project is not a pisa project
     projName = props.projectName
-    if (!projName.startsWith("pisa_2025")) {
-        final def title = "Write PISA batch TM"
-        final def msg   = "This is not a PISA25 project."
-        echo("== ${title} ==")
-        echo(msg)
-        // showMessageDialog(null, msg, title, INFORMATION_MESSAGE)
-        return
-    }
+    // if (!projName.startsWith("pisa_2025")) {
+    //     final def title = "Write PISA batch TM"
+    //     final def msg   = "This is not a PISA25 project."
+    //     echo("== ${title} ==")
+    //     echo(msg)
+    //     // showMessageDialog(null, msg, title, INFORMATION_MESSAGE)
+    //     return
+    // }
 
     echo("Generating batch TMX")
     projectRoot = props.projectRoot
@@ -70,7 +70,7 @@ if (eventType == SAVE) {
     projectFiles = project.projectFiles
     projectFileList = []
     projectFiles.each { file ->
-        if (file.filePath =~ /(?i)xml$/) {
+        if (file.filePath =~ /(?i)\.(xml|html)$/) {
             projectFileList.add(file.filePath)
         }
     }
