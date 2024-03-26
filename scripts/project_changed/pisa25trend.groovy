@@ -53,7 +53,9 @@ switch (eventType) {
         replacePair = [
             [find: /&lt;([^&\n<>]+)>/, replacement: /&lt;$1&gt;/],
             [find: /([\r])[\r]+/, replacement: /$1/],
-            [find: /&lt;br([^&]+)&gt;/, replacement: /<br$1>/],
+            // [find: /&lt;br([^&]+)&gt;/, replacement: /<br$1>/], // matched things like &lt;broad science&gt;, hence removed
+            [find: /&lt;br(\s?\/)&gt;/,   replacement: /<br$1>/],
+            [find: /&lt;br(\s+class="[^"]+"\/)&gt;/, replacement: /<br$1>/],
             [find: /𝑎/, replacement: /<i>a<\/i>/],
             [find: /𝑏/, replacement: /<i>b<\/i>/],
             [find: /𝑐/, replacement: /<i>c<\/i>/],

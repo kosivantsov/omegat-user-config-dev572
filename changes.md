@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 101_cs0 (2024-03-26)
+
+* Script: Updated `pisa25trend.groovy` to restrict the scope of the replacement that unescaped break tags
+
 ## Update 100_cs0 (2024-03-22)
 
 * Script: Updated `writeTMX4batch.groovy` to include HTML files as well as XML, and ignore project name
