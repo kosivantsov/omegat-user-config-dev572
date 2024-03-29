@@ -1,9 +1,9 @@
 /**
  * Usage : Put this script in <ScriptsDir>/project_changed folder. Create a folder if it doesn't exists.
  *
- * @authors 	Manuel Souto Pico (based on a wonderful script written by Yu Tang)
- * @version 	0.1.0
- * @date 		2023.08.31
+ * @authors     Manuel Souto Pico (based on a wonderful script written by Yu Tang)
+ * @version     0.1.0
+ * @date        2023.08.31
  */
 
 import static org.omegat.core.events.IProjectEventListener.PROJECT_CHANGE_TYPE.*
@@ -41,20 +41,20 @@ switch (eventType) {
     case LOAD:
         // Skip traverse
         if (skipTraverse(LOAD)) {
-			LOAD.skipTraverse = false // reset the flag
-			return
+            LOAD.skipTraverse = false // reset the flag
+            return
         }
 
         dir = project.projectProperties.sourceRoot
         replacePair = []
-		break
-	case COMPILE:
-		dir = project.projectProperties.targetRoot
-		// restores ETS language codes
-		replacePair = [
+        break
+    case COMPILE:
+        dir = project.projectProperties.targetRoot
+        // restores ETS language codes
+        replacePair = [
             // [find: /(<(i) class="[^"]*fas fa[^"]+")\/>/, replacement: /$1><\/$2>/],
-			[find: /(<text>)/, replacement: /$1<![CDATA[/],
-			[find: /(<\/text>)/, replacement: /]]>$1/]
+            [find: /(<text>)(?!<!\[CDATA\[)/, replacement: /$1<![CDATA[/],
+            [find: /(?<!\]\]>)(<\/text>)/, replacement: /]]>$1/]
         ]
         break
     default:

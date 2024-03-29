@@ -1,5 +1,10 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 102_cs0 (2024-03-29)
+
+* Script: Updated `pisa25cdata.groovy` to only add CDATA wrappers in LDW files if not found
+* Script: Added `utils_rename_project.groovy` to prevent users from renaming projects
+
 ## Update 101_cs0 (2024-03-26)
 
 * Script: Updated `pisa25trend.groovy` to restrict the scope of the replacement that unescaped break tags
