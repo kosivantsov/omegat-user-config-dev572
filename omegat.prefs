@@ -26,7 +26,7 @@
     <ac_show_suggestions_automatically>true</ac_show_suggestions_automatically>
     <allow_auto_spellchecking>true</allow_auto_spellchecking>
     <allow_history_completer>false</allow_history_completer>
-    <auto_save_interval>120</auto_save_interval>
+    <auto_save_interval>600</auto_save_interval>
     <automatically_check_version>false</automatically_check_version>
     <dictionary_auto_search>false</dictionary_auto_search>
     <dictionary_fuzzy_matching>true</dictionary_fuzzy_matching>
