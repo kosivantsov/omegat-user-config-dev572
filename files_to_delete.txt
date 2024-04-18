@@ -14,6 +14,7 @@ scripts/FlushUneditedEntriesCLI.groovy
 scripts/project_changed/container_assets.groovy
 scripts/project_changed/restore_files_order.groovy
 scripts/project_changed/set_latest_translation.groovy
+scripts/project_changed/utils_rename_project.groovy
 scripts/restore_default_trans_cli.groovy
 scripts/set_latest_translations.groovy
 SHA1SUM

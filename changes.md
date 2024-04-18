@@ -1,5 +1,11 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 103_cs0 (2024-04-17)
+
+* Config: Increased auto-save interval (from 2 to 10 min) to avoid too frequent commits in team projects
+* Script: Updated `checkOMTversion.groovy` to include SEA-PLM projects.
+* Config: Updated list of files to be deleted to remove `project_changed/utils_rename_project.groovy` (for now)
+
 ## Update 102_cs0 (2024-03-29)
 
 * Script: Updated `pisa25cdata.groovy` to only add CDATA wrappers in LDW files if not found
