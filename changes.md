@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 104_cs0 .... 
+
+* Script: Updated `pisa25trend.groovy` to remove line separators in target files (or to be precise, replace them with a zero-width space)
+
 ## Update 103_cs0 (2024-04-17)
 
 * Config: Increased auto-save interval (from 2 to 10 min) to avoid too frequent commits in team projects
