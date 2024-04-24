@@ -4,10 +4,6 @@
   [\w.-]+@[\w.-]+
 (?:&gt;)
 
-| # HASHES BLOCK: 
-
-###+
-
 | # BLABLA BLOCK: 
 
 [xX]{3,}

@@ -1,8 +1,10 @@
 # OmegaT (v5.7.2-jre11) customization
 
-## Update 104_cs0 .... 
+## Update 104_cs0 (2024-04-24)
 
+* Config: Removed `###` from flagged text patterns
 * Script: Updated `pisa25trend.groovy` to remove line separators in target files (or to be precise, replace them with a zero-width space)
+* Script: Updated `project_changed/checkOMTversion.groovy` to run regardless of whether a project is open or what project that is.
 
 ## Update 103_cs0 (2024-04-17)
 
