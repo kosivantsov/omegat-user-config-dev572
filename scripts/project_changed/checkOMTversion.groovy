@@ -31,7 +31,7 @@ if (eventType == LOAD) {
         org.omegat.util.gui.UIThreadsUtil.executeInSwingThread { projectClose() }
 
         // inform the user 
-        msg="OmegaT 5.7.2 built by cApStAn is required for PISA or cApStAn projects."
+        msg="OmegaT 5.7.2 (built by cApStAn) is required.  "
         console.println("== ${title} ==")
         console.println(msg)
         showMessageDialog null, msg, title, INFORMATION_MESSAGE
