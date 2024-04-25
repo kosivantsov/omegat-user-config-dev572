@@ -35,7 +35,7 @@
     <display_modification_info>none</display_modification_info>
     <display_segment_sources>true</display_segment_sources>
     <editor_initial_segment_load_count>2000</editor_initial_segment_load_count>
-    <ext_tmx_fuzzy_match_threshold>50</ext_tmx_fuzzy_match_threshold>
+    <ext_tmx_fuzzy_match_threshold>60</ext_tmx_fuzzy_match_threshold>
     <ext_tmx_match_template>${id}. ${fuzzyFlag}${diff}
 ▷ ${score}/${noStemScore}/${adjustedScore}% ‹@{id}:@{file}› ¶${fileShortPath}
 ${targetText}</ext_tmx_match_template>
@@ -63,7 +63,7 @@ ${targetText}</ext_tmx_match_template>
     <most_recent_projects_size>100</most_recent_projects_size>
     <mt_auto_fetch>false</mt_auto_fetch>
     <notify_glossary_hits>true</notify_glossary_hits>
-    <penalty_foreign_matches>30</penalty_foreign_matches>
+    <penalty_foreign_matches>45</penalty_foreign_matches>
     <project_files_show_on_load>true</project_files_show_on_load>
     <project_files_window_height>400</project_files_window_height>
     <project_files_window_width>640</project_files_window_width>
