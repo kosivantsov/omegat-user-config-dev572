@@ -3,6 +3,7 @@
 ## Update 106_cs0 (2024-04-26)
 
 * Script: Updated/fixed `pisa25trend.groovy` to apply replacements also in HTML files (for coding guides)
+* Config: Added autotext shortcut `\br` to insert HTML break tag (`<br/>`)
 
 ## Update 105_cs0 (2024-04-25)
 

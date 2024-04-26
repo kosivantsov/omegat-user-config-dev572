@@ -40,6 +40,7 @@
 \length	𝑙	length (geometry)
 \width	𝑤	width (geometry)
 \base	𝑏	base (geometry)
+\br	<br/>	HTML break element
 \nbsp	 	non-breaking space (U+00A0)
 \thinsp	 	thin space
 \zwnj	‌	zero-width non-joiner (U+200C)
