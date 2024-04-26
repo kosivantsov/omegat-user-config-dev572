@@ -1,10 +1,14 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 106_cs0 (2024-04-26)
+
+* Script: Updated/fixed `pisa25trend.groovy` to apply replacements also in HTML files (for coding guides)
+
 ## Update 105_cs0 (2024-04-25)
 
 * Config: Raised `ext_tmx_fuzzy_match_threshold` to 60%.
 * Config: Raised `penalty_foreign_matches` to 45 (to avoid source language matches, see https://sourceforge.net/p/omegat/feature-requests/1578/)
-* Script: Updated `pisa25trend.groovy` to apply inline formatting in XML/HTML (see https://jsfiddle.net/msoutopico/f82rbL1u/3/)
+* Script: Updated `pisa25trend.groovy` to apply inline formatting in XML (see https://jsfiddle.net/msoutopico/f82rbL1u/3/)
 
 ## Update 104_cs0 (2024-04-24)
 

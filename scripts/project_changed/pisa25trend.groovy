@@ -49,7 +49,6 @@ switch (eventType) {
 		break
 	case COMPILE:
 		dir = project.projectProperties.targetRoot
-		// restores ETS language codes
         replacePair = [
             [find: /&lt;([^&\n<>]+)>/, replacement: /&lt;$1&gt;/],
             [find: /([\r])[\r]+/, replacement: /$1/],
@@ -89,7 +88,7 @@ def options = [
     type       : groovy.io.FileType.FILES,
     // nameFilter : ~/.*\.xlf/
     // nameFilter : ~/PISA_[a-z]{3}-[A-Z]{3}.+?(MS|FT)(20)?(2[12]|1[58]).*?\.xlf/
-    nameFilter : ~/.*PISA_2025FT_.*\.xml/
+    nameFilter : ~/.*PISA_2025FT_.*\.(xml|html)$/
     // see https://regex101.com/r/Eo1HiI/1 for piaac
     // see https://regex101.com/r/Eo1HiI/2 for pisa+piaac
 ]
