@@ -1,18 +1,18 @@
 /* :name = Write PISA batch TM :description = 
  *
  *  @author:    Kos Ivantsov
- *  @version:   0.2
+ *  @version:   0.3
  *  @creation:  2024.01.12
- *  @update:    2024.02.09
+ *  @update:    2024.05.01
  */
 
 import java.nio.file.Files
 import java.nio.file.Path
+import org.omegat.util.OStrings
 import org.omegat.util.StringUtil
 import org.omegat.util.TMXReader2
 import org.omegat.util.TMXWriter
 import static org.omegat.core.events.IProjectEventListener.PROJECT_CHANGE_TYPE.*
-
 
 //// CLI or GUI probing
 def echo
@@ -51,6 +51,8 @@ if (eventType == SAVE) {
     // }
 
     echo("Generating batch TMX")
+    omtVersion = OStrings.VERSION
+    omtRevision = OStrings.REVISION
     projectRoot = props.projectRoot
     sourceRoot = props.sourceRoot
     sourcePath = Path.of(sourceRoot)
@@ -146,6 +148,7 @@ if (eventType == SAVE) {
 <tmx version=\"1.1\">
   <header\
  creationtool=\"OmegaTScript\"\
+ creationtoolversion=\"${omtVersion}_${omtRevision}\"\
  o-tmf=\"OmegaT TMX\"\
  adminlang=\"EN-US\"\
  datatype=\"plaintext\"\

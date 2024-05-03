@@ -4,6 +4,10 @@
 
 * Script: Updated/fixed `pisa25trend.groovy` to apply replacements also in HTML files (for coding guides)
 * Config: Added autotext shortcut `\br` to insert HTML break tag (`<br/>`)
+* Script: Updated `writeTMX4batch.groovy` to include OmegaT version/hash in the header
+* Script: Updated on-demand `updateConfigBundle.groovy` to run regardless of what the local version is
+
+in the linked update it removes the local_version_notes.txt so it's run each time the user invokes it 
 
 ## Update 105_cs0 (2024-04-25)
 

@@ -5,7 +5,8 @@
  * @date:    2020-09-27
  * @review:  Lev Abashkin
  * @review:  Manuel Souto Pico
- * @version: 0.5.4
+ * @version: 0.5.5
+ * @latest:  2024-04-06
  *
  */
 
@@ -167,6 +168,10 @@ bundlePrefFile = new File(tmpConfigDir.toString() + File.separator + "omegat.pre
 localPrefFile = new File(confDir + File.separator + "omegat.prefs")
 bundleAutoText = new File(tmpConfigDir.toString() + File.separator + "omegat.autotext")
 localAutoText = new File(confDir + File.separator + "omegat.autotext")
+// A hack to run the full customization each time
+if (verFile.exists()) {
+    verFile.delete()
+}
 
 logEcho = { msg ->
     if (logFile.exists()) {
