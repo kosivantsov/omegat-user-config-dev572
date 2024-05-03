@@ -1,5 +1,10 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 106_cs0 (2024-04-26)
+
+* Script: Updated/fixed `pisa25trend.groovy` to apply replacements also in HTML files (for coding guides)
+* Config: Added autotext shortcut `\br` to insert HTML break tag (`<br/>`)
+
 ## Update 105_cs0 (2024-04-25)
 
 * Config: Raised `ext_tmx_fuzzy_match_threshold` to 60%.
