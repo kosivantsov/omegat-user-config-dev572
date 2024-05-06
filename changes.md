@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 107_cs0 (2024-05-06)
+
+* Script: Updated/fixed `pisa25trend.groovy` to avoid markdown-to-html replacements in LDW files
+
 ## Update 106_cs0 (2024-04-26)
 
 * Script: Updated/fixed `pisa25trend.groovy` to apply replacements also in HTML files (for coding guides)
