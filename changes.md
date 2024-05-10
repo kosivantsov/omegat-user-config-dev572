@@ -1,8 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
-## Update 107_cs0 (2024-05-06)
+## Update 107_cs0 (2024-05-10)
 
-* Script: Updated/fixed `pisa25trend.groovy` to avoid markdown-to-html replacements in LDW files
+* Script: Added new script `md2html.groovy` to have markdown-to-html replacements in inline formatting markup in all HTM/XML files except LDW units
+* Script: Removed markdown-to-html replacements from `pisa25trend.groovy` to allow this script run also on LDW units
 
 ## Update 106_cs0 (2024-04-26)
 
