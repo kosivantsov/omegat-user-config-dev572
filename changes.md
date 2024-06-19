@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2-jre11) customization
 
+## Update 108_cs0 (2024-06-19)
+
+* Script: Updated script `md2html.groovy` to produce underlining as `<span class="txt-underline">` (TAO-specific) instead of `<u>` (QTI incompatible)
+
 ## Update 107_cs0 (2024-05-10)
 
 * Script: Added new script `md2html.groovy` to have markdown-to-html replacements in inline formatting markup in all HTM/XML files except LDW units
