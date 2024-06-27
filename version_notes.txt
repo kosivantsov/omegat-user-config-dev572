@@ -1,4 +1,11 @@
-# OmegaT (v5.7.2-jre11) customization
+# OmegaT (v5.7.2/5.7.3) customization
+
+## Update 109_cs0 (2024-06-27)
+
+* Config: New option in preferences to enable locked segments
+* Config: New option in preferences to always create target files when closing the project
+* Config: New option in preferences to always commit target files (in team projects) when creating them
+* Script: Updated `checkOMTversion.groovy` to accept any of several revisions (current, testing)
 
 ## Update 108_cs0 (2024-06-19)
 
