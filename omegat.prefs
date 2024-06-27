@@ -117,7 +117,10 @@ ${targetText}</ext_tmx_match_template>
     <hide_tagonly_segments>true</hide_tagonly_segments>
     <expr_tagonly_segments>^[\p{Zs}\u200C]*(&lt;/?[xgeb]\d/?&gt;[\p{Zs}\u200C]*)+$</expr_tagonly_segments>
     <tags_valid_required>true</tags_valid_required>
-  <view_option_mod_info_template>Last edit by ${changedId} on ${changedDateShortCountry} at ${changedTimeCountry}</view_option_mod_info_template>
+    <view_option_mod_info_template>Last edit by ${changedId} on ${changedDateShortCountry} at ${changedTimeCountry}</view_option_mod_info_template>
     <view_option_mod_info_template_wo_date>Last edit by ${changedId}</view_option_mod_info_template_wo_date>
+    <support_locked_segments>true</support_locked_segments>
+    <always_compile_close>true</always_compile_close>
+    <always_commit_compile>true</always_commit_compile>
   </preference>
 </omegat>
