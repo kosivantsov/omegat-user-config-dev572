@@ -122,5 +122,6 @@ ${targetText}</ext_tmx_match_template>
     <support_locked_segments>true</support_locked_segments>
     <always_compile_close>true</always_compile_close>
     <always_commit_compile>true</always_commit_compile>
+    <view_option_template_active>true</view_option_template_active>
   </preference>
 </omegat>

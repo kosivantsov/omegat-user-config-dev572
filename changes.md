@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 110_cs0 (2024-06-??)
+
+* Config: Customized (shortened) last modification info
+
 ## Update 109_cs0 (2024-06-27)
 
 * Config: New option in preferences to enable locked segments
