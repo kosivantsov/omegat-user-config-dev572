@@ -1,6 +1,6 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
-## Update 110_cs0 (2024-06-??)
+## Update 110_cs0 (2024-07-01)
 
 * Config: Customized (shortened) last modification info
 
