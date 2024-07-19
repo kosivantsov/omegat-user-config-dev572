@@ -270,7 +270,7 @@ in the linked update it removes the local_version_notes.txt so it's run each tim
 
 ## Update 59_cs0 (2020-11-30)
 
-* Scripts: Customization script fix, v. 0.5.3 (remove folder <file.jar>)
+* Scripts: Customization script fix, v. 0.5.3 (remove folder `file.jar`)
 
 ## Update 58_csp (2020-11-30)
 
@@ -454,7 +454,7 @@ in the linked update it removes the local_version_notes.txt so it's run each tim
 
 ## Update 22_csp (2019-07-03)
 
-* Teak custom tags to avoid protecting some <adaptations>
+* Teak custom tags to avoid protecting some `<forced adaptations>`
 * Korean currency symbol added to the character map (₩)
 
 ## Update 21_csp (2019-06-21)
@@ -475,7 +475,7 @@ in the linked update it removes the local_version_notes.txt so it's run each tim
 ## Update 10_csp (2019-05-07)
 
 * New shortcut to insert apostrophes
-* <strong> now matched as tag and not as forced adaptation
+* `<strong>` now matched as tag and not as forced adaptation
 * Added script to convert Western to Arabic-Indic numbers globally
 * Added Eastern Arabic numbers to Autotext and Character Map
 * Customized colors for x-auto (pink) and x-enforced (orange)
