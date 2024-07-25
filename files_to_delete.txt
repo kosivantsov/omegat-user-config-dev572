@@ -17,4 +17,5 @@ scripts/project_changed/set_latest_translation.groovy
 scripts/project_changed/utils_rename_project.groovy
 scripts/restore_default_trans_cli.groovy
 scripts/set_latest_translations.groovy
+scripts/goto_next_nonunique.groovy
 SHA1SUM

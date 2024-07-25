@@ -81,8 +81,8 @@ ${targetText}</ext_tmx_match_template>
     <script_window_y>80</script_window_y>
     <scripts_dir>scripts</scripts_dir>
     <scripts_quick_1>check_rules.groovy</scripts_quick_1>
-    <scripts_quick_10>goto_next_nonunique.groovy</scripts_quick_10>
-    <scripts_quick_11>fetch_glossaries.groovy</scripts_quick_11>
+    <scripts_quick_10>goto_next_rep_inprj.groovy</scripts_quick_10>
+    <scripts_quick_11>goto_next_rep_ingrp.groovy</scripts_quick_11>
     <scripts_quick_12>updateConfigBundle.groovy</scripts_quick_12>
     <scripts_quick_2>write_project2excel.groovy</scripts_quick_2>
     <scripts_quick_3>adapt_tags_to_match_target.groovy</scripts_quick_3>
@@ -91,7 +91,7 @@ ${targetText}</ext_tmx_match_template>
     <scripts_quick_6>strip_html_tags.groovy</scripts_quick_6>
     <scripts_quick_7>replace_with_match_no_tags.groovy</scripts_quick_7>
     <scripts_quick_8>copy_source.groovy</scripts_quick_8>
-    <scripts_quick_9>tagwipe.groovy</scripts_quick_9>
+    <scripts_quick_9>utils_import_creds.groovy</scripts_quick_9>
     <search_window_auto_sync>false</search_window_auto_sync>
     <search_window_back_to_initial_segment>false</search_window_back_to_initial_segment>
     <search_window_exclude_orphans>true</search_window_exclude_orphans>
@@ -123,5 +123,6 @@ ${targetText}</ext_tmx_match_template>
     <always_compile_close>true</always_compile_close>
     <always_commit_compile>true</always_commit_compile>
     <view_option_template_active>true</view_option_template_active>
+    <tagValidateOnLeave>true</tagValidateOnLeave>
   </preference>
 </omegat>

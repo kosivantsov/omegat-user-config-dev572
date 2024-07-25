@@ -1,5 +1,15 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 111_cs0 (2024-07-25)
+
+* Config: Option `tagValidateOnLeave` enabled to have tag issues flagged when leaving the segment
+* Script: Remove script `goto_next_nonunique.groovy` (which was a copy of `goto_next_rep_inprj.groovy` using old jargon
+* Script: Added `utils_import_creds.groovy` to import credentials files.
+* Config: Updated script shortcuts: 
+	- `Ctrl+Shift+F9` launches the import credentials dialog
+	- `Ctrl+Shift+F10` goes to the next repetition in the project
+	- `Ctrl+Shift+F11` goes to the next repetition for the current segment
+
 ## Update 110_cs0 (2024-07-01)
 
 * Config: Customized (shortened) last modification info
