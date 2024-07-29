@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 112_cs0 (2024-07-29)
+
+* Script: Updated underline class in `md2html.groovy` based on ACER's feedback in ticket PISATAO-296
+
 ## Update 111_cs0 (2024-07-25)
 
 * Config: Option `tagValidateOnLeave` enabled to have tag issues flagged when leaving the segment
