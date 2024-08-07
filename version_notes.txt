@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 114_cs0 (2024-08-07)
+
+* Script: Temporarily accepted one more OmegaT testing version.
+
 ## Update 113_c00 (2024-07-31)
 
 * Config: Defined color for locked segments (different setting from previous enforced color, but same value)
