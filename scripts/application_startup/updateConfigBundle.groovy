@@ -5,7 +5,8 @@
  * @date:    2020-09-27
  * @review:  Lev Abashkin
  * @review:  Manuel Souto Pico
- * @version: 0.5.4
+ * @version: 0.5.5
+ * @latest:  2024-04-06
  *
  */
 
@@ -23,6 +24,7 @@
  *          0.5.2: Fix local plugin directory creation
  *          0.5.3: Delete folder accidentally created with version 0.5.1 when trying to write jar file
  *          0.5.4: Update autotext merging logic
+ *          0.5.5: Added hack to run the full customization each time (only to be in the version that does not autoLaunch)
  *
  */
 
@@ -167,6 +169,10 @@ bundlePrefFile = new File(tmpConfigDir.toString() + File.separator + "omegat.pre
 localPrefFile = new File(confDir + File.separator + "omegat.prefs")
 bundleAutoText = new File(tmpConfigDir.toString() + File.separator + "omegat.autotext")
 localAutoText = new File(confDir + File.separator + "omegat.autotext")
+// A hack to run the full customization each time
+if (verFile.exists() && !autoLaunch) {
+    verFile.delete()
+}
 
 logEcho = { msg ->
     if (logFile.exists()) {
