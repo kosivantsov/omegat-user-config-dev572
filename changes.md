@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 115_cs0 (2024-08-20)
+
+* Script: Add `removeLines` function in `application_startup/delete_unneeded_lines.groovy` so as to prune any lines in any files
+
 ## Update 114_cs0 (2024-08-07)
 
 * Script: Temporarily accepted one more OmegaT testing version.

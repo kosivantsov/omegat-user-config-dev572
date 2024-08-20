@@ -1,10 +1,31 @@
 /* :name = Delete Unneeded Lines :description =
  *
  * @author:  Manuel Souto Pico
- * @date:    2024-03-11
- * @version: 0.0.1
+ * @date:    2024-08-20
+ * @version: 0.0.2
  *
  */
+
+/*
+ * CHANGES:
+ *     0.0.2: Add removeLines function and use it to delete old passwords
+ */
+
+
+def removeLines(file_path, pattern) {
+
+	if (file_path.exists()) {
+		def lines = file_path.text.readLines()
+		if (lines.join() =~ /${pattern}/) {
+			console.println(">> File ${file_path} will be pruned")
+			lines.removeAll {
+				it ==~ /.*${pattern}.*/
+			}
+			file_path.write(lines.join('\n'), "UTF-8")
+		}
+	}
+}
+
 
 import org.omegat.util.StaticUtils
 
@@ -28,5 +49,15 @@ if (autotext_config_file.exists()) {
 		autotext_config_file.write(autotext_list.join('\n'), "UTF-8")
 	}
 }
+
+
+// ---------
+
+config_dir = StaticUtils.getConfigDir()
+creds_fpath = new File(config_dir + File.separator + "repositories.properties")
+old_creds_pattern = "(Ym00NWJwNHl1M3Q2cWN2cXdqYm4zcGhucm01bGh0YXRzNGZkenVjMm5mZGNhYjczaW5tcQ)"
+
+removeLines(creds_fpath, old_creds_pattern)
+
 
 return
