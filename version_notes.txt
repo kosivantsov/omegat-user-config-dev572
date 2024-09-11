@@ -1,5 +1,13 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 116_cs0 (2024-09-11)
+
+* Script: Updated `utils_import_creds.groovy` to overwrite lines if the imported file contains creds for repos already existing in 'repositories.properties'
+
+## Update 115_cs0 (2024-08-20)
+
+* Script: Add `removeLines` function in `application_startup/delete_unneeded_lines.groovy` so as to prune any lines in any files
+
 ## Update 114_cs0 (2024-08-07)
 
 * Script: Temporarily accepted one more OmegaT testing version.
