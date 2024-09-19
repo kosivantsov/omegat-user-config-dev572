@@ -1,120 +1,152 @@
-\lq	“	upper left double quotation mark (U+201C)
-\rq	”	upper right double quotation mark (U+201D)
-\lolq	„	lower left (low-9) double quotation mark (U+201E)
+(tm)	™	trademark symbol
 << 	«	left-pointing double angle quotation mark (U+00AB)
 >> 	»	right-pointing duoble angle quotation mark (U+00BB)
-\laquo 	«	left-pointing double angle quotation mark (U+00AB)
-\raquo 	»	right-pointing duoble angle quotation mark (U+00BB)
-\rsquo	’	right single quotation mark (U+2019)
+\0	٠	
+\1	١	
+\2	٢	
+\3	٣	
+\4	٤	
+\5	٥	
+\6	٦	
+\7	٧	
+\8	٨	
+\9	٩	
 \apos	’	right single quotation mark (U+2019)
-\lsquo	‘	left single quotation mark (U+2018)
-\x	×	multiplication symbol / vector product
-\times	×	multiplication symbol
-\tm	™	trademark symbol
-\reg	®	registered (U+00AE)
-(tm)	™	trademark symbol
-\sup0	⁰	superscript 0 (U+2070)
-\sup1	¹	superscript 1 (U+00B9)
-\sup2	²	superscript 2 (U+00B2)
-\sup3	³	superscript 3 (U+00B3)
-\sup4	⁴	superscript 4 (U+2074)
-\sup5	⁵	superscript 5 (U+2075)
-\sup6	⁶	superscript 6 (U+2076)
-\sup7	⁷	superscript 7 (U+2077)
-\sup8	⁸	superscript 8 (U+2078)
-\sup9	⁹	superscript 9 (U+2079)
-\supi	ⁱ	superscript i (U+2071)
-\supn	ⁿ	superscript n (U+207F)
-\sup(	⁽	superscript left parenthesis (U+207D)
-\sup)	⁾	superscript right parenthesis (U+207E)
-\lrm	‎	LRM (U+200E)
-\rlm	‏	RLM (U+200F)
-\minus	–	n-dash (U+2013)
-\en	–	n-dash (U+2013)
-\em	—	m-dash (U+2014)
-\ndash	–	n-dash (U+2013)
-\mdash	—	m-dash (U+2014)
-\pi	π	mathematical pi letter
-\height	𝘩	height (geometry)
-\radius	𝑟	radius (geometry)
-\length	𝑙	length (geometry)
-\width	𝑤	width (geometry)
+\approx	≈	 approximately equal to
+\ar_percent	⁒	commercial minus sign (U+2052) 
 \base	𝑏	base (geometry)
 \br	<br/>	HTML break element
-\nbsp	 	non-breaking space (U+00A0)
-\thinsp	 	thin space
-\zwnj	‌	zero-width non-joiner (U+200C)
-\zwsp	​	zero-width space (U+200B)
-\zwj	‍	word joiner (U+2060)
-\wj	⁠	zero-width joiner (U+200D)
-\ellipsis	…	horizontal ellipsis
-\divided	÷	division
-\middot	·	 interpunct/interpoint/middle dot/middot/centered dot (multiplication / scalar product)
-\interpunct	·	 interpunct/interpoint/middle dot/middot/centered dot (multiplication / scalar product)
 \bullet	∙	bullet operator (U+2219)
-\pm	±	plus or minus
-\le	≤	less than or equal to
-\ge	≥	greater than or equal to
-\ne	≠	does not equal
-\approx	≈	 approximately equal to
-\emptyset	∅	empty set
-\sqrt	√	square root (U+221A)
-\radic	√	square root (U+221A)
-\deg	°	degree
-\infty	∞	infinity
-\copyright	©	copyright symbol
-\smalle	ᵉ	modifier letter small e (U+1D49)
-\Omegat	Ω	Greek capital letter omega / Ohm 
-\pound	£	pound currency
-\euro	€	euro currency
 \cent	¢	cent (U+00A2)
-\yen	¥	yen (U+00A5)
-\ordf	ª	feminine ordinal indicator (U+00AA)
-\ordm	º	masculine ordinal indicator (U+00BA)
-\shy	­	soft hyphen (U+00AD)
-\micro	µ	micro (U+00B5)
-\not	¬	not sign (U+00AC)
+\copyright	©	copyright symbol
+\deg	°	degree
+\divided	÷	division
+\ellipsis	…	horizontal ellipsis
+\em	—	m-dash (U+2014)
+\emptyset	∅	empty set
+\en	–	n-dash (U+2013)
+\euro	€	euro currency
+\frac110	⅒	vulgar fraction 1/10
 \frac12	½ 	vulgar fraction 1/2 / half
 \frac13	⅓ 	vulgar fraction 1/3 / third
-\frac23	⅔	vulgar fraction 2/3 
 \frac14	¼	vulgar fraction 1/4 / quarter
-\frac34	¾	vulgar fraction 3/4
 \frac15	⅕	vulgar fraction 1/5 / fifth
-\frac25	⅖	vulgar fraction 2/5
-\frac35	⅗	vulgar fraction 3/5
-\frac45	⅘	vulgar fraction 4/5
 \frac16	⅙	vulgar fraction 1/6
-\frac56	⅚	vulgar fraction 5/6
 \frac17	⅐	vulgar fraction 1/7
 \frac18	⅛	vulgar fraction 1/8
+\frac19	⅑	vulgar fraction 1/9
+\frac23	⅔	vulgar fraction 2/3 
+\frac25	⅖	vulgar fraction 2/5
+\frac34	¾	vulgar fraction 3/4
+\frac35	⅗	vulgar fraction 3/5
 \frac38	⅜	vulgar fraction 3/8
+\frac45	⅘	vulgar fraction 4/5
+\frac56	⅚	vulgar fraction 5/6
 \frac58	⅝	vulgar fraction 5/8
 \frac78	⅞	vulgar fraction 7/8
-\frac19	⅑	vulgar fraction 1/9
-\frac110	⅒	vulgar fraction 1/10
 \fracslash	⁄	fraction slash (E+2044)
-\9	٩	
-\8	٨	
-\7	٧	
-\6	٦	
-\5	٥	
-\4	٤	
-\3	٣	
-\2	٢	
-\1	١	
-\0	٠	
-\ar_percent	⁒	commercial minus sign (U+2052) 
+\ge	≥	greater than or equal to
+\height	𝘩	height (geometry)
+\infty	∞	infinity
+\interpunct	·	 interpunct/interpoint/middle dot/middot/centered dot (multiplication / scalar product)
+\laquo 	«	left-pointing double angle quotation mark (U+00AB)
+\larr	←	leftwards arrow (U+2190)
+\le	≤	less than or equal to
+\length	𝑙	length (geometry)
+\lolq	„	lower left (low-9) double quotation mark (U+201E)
+\lq	“	upper left double quotation mark (U+201C)
+\lre	‪	left-to-right embedding (U+202A)
+\lrm	‎	LRM (U+200E)
+\lsquo	‘	left single quotation mark (U+2018)
+\mathA	𝐴	math italic A (U+1D434)
+\matha	𝑎	math italic a (U+1D44E)
+\mathB	𝐵	math italic B (U+1D435)
+\mathb	𝑏	math italic b (U+1D44F)
+\mathC	𝐶	math italic C (U+1D436)
+\mathc	𝑐	math italic c (U+1D450)
+\mathD	𝐷	math italic D (U+1D437)
+\mathd	𝑑	math italic d (U+1D451)
+\mathE	𝐸	math italic E (U+1D438)
+\mathe	𝑒	math italic e (U+1D452)
+\mathF	𝐹	math italic F (U+1D439)
+\mathf	𝑓	math italic f (U+1D453)
+\mathG	𝐺	math italic G (U+1D43A)
+\mathg	𝑔	math italic g (U+1D454)
+\mathH	𝐻	math italic H (U+1D43B)
+\mathh	𝘩	math italic h ((U+1D629))
+\mathI	𝐼	math italic I (U+1D43C)
+\mathi	𝑖	math italic i (U+1D456)
+\mathJ	𝐽	math italic J (U+1D43D)
+\mathj	𝑗	math italic j (U+1D457)
+\mathK	𝐾	math italic K (U+1D43E)
+\mathk	𝑘	math italic k (U+1D458)
+\mathL	𝐿	math italic L (U+1D43F)
+\mathl	𝑙	math italic l (U+1D459)
+\mathM	𝑀	math italic M (U+1D440)
+\mathm	𝑚	math italic m (U+1D45A)
+\mathN	𝑁	math italic N (U+1D441)
+\mathn	𝑛	math italic n (U+1D45B)
+\mathO	𝑂	math italic O (U+1D442)
+\matho	𝑜	math italic o (U+1D45C)
+\mathP	𝑃	math italic P (U+1D443)
+\mathp	𝑝	math italic p (U+1D45D)
+\mathQ	𝑄	math italic Q (U+1D444)
+\mathq	𝑞	math italic q (U+1D45E)
+\mathR	𝑅	math italic R (U+1D445)
+\mathr	𝑟	math italic r (U+1D45F)
+\mathS	𝑆	math italic S (U+1D446)
+\maths	𝑠	math italic s (U+1D460)
+\mathscaron	𝑠̌	Mathematical Italic Small S: 𝑠 (U+1D622) combined with caron (U+030C)
+\mathT	𝑇	math italic T (U+1D447)
+\matht	𝑡	math italic t (U+1D461)
+\mathU	𝑈	math italic U (U+1D448)
+\mathu	𝑢	math italic u (U+1D462)
+\mathV	𝑉	math italic V (U+1D449)
+\mathv	𝑣	math italic v (U+1D463)
+\mathW	𝑊	math italic W (U+1D44A)
+\mathw	𝑤	math italic w (U+1D464)
+\mathX	𝑋	math italic X (U+1D44B)
+\mathx	𝑥	math italic x (U+1D465)
+\mathY	𝑌	math italic Y (U+1D44C)
+\mathy	𝑦	math italic y (U+1D466)
+\mathZ	𝑍	math italic Z (U+1D44D)
+\mathz	𝑧	math italic z (U+1D467)
+\mathš	𝑠̌	Mathematical Italic Small S: 𝑠 (U+1D622) combined with caron (U+030C)
+\mdash	—	m-dash (U+2014)
+\micro	µ	micro (U+00B5)
+\middot	·	 interpunct/interpoint/middle dot/middot/centered dot (multiplication / scalar product)
+\minus	–	n-dash (U+2013)
 \nbhy	‑	non-breaking hyphen
-\ordrd	ʳᵈ	rd ordinal superscript
+\nbsp	 	non-breaking space (U+00A0)
+\ndash	–	n-dash (U+2013)
+\ne	≠	does not equal
+\not	¬	not sign (U+00AC)
+\Omegat	Ω	Greek capital letter omega / Ohm 
+\ordde	ᵈᵉ	superscript small de (for 2nd ordinal in French)
+\orde	ᵉ	superscript small e (for ordinals in French)
+\ordf	ª	feminine ordinal indicator (U+00AA)
+\ordm	º	masculine ordinal indicator (U+00BA)
 \ordnd	ⁿᵈ	nd ordinal superscript
+\ordrd	ʳᵈ	rd ordinal superscript
 \ordst	ˢᵗ	st ordinal superscript
 \ordth	ᵗʰ	th ordinal superscript
-\orde	ᵉ	superscript small e (for ordinals in French)
-\supe	ᵉ	superscript small e (for ordinals in French)
-\ordde	ᵈᵉ	superscript small de (for 2nd ordinal in French)
-\supde	ᵈᵉ	superscript small de (for 2nd ordinal in French)
-\sup-	⁻	superscript minus sign (U+207B)
-\sup+	⁺	superscript plus sign (U+207A)
+\pdf	‬	pod directional formatting (U+202C)
+\pi	π	mathematical pi letter
+\planckcons	𝘩	Plank Constant 𝘩 ((U+1D629))
+\pm	±	plus or minus
+\pound	£	pound currency
+\radic	√	square root (U+221A)
+\radius	𝑟	radius (geometry)
+\raquo 	»	right-pointing duoble angle quotation mark (U+00BB)
+\rarr	→	rightwards arrow (U+2192)
+\reg	®	registered (U+00AE)
+\rle	‫	right-to-left embedding (U+202B)
+\rlm	‏	RLM (U+200F)
+\rq	”	upper right double quotation mark (U+201D)
+\rsquo	’	right single quotation mark (U+2019)
+\shy	­	soft hyphen (U+00AD)
+\smalle	ᵉ	modifier letter small e (U+1D49)
+\sqrt	√	square root (U+221A)
 \sub0	₀	subscript 0 (U+2080)
 \sub1	₁	subscript 1 (U+2081)
 \sub2	₂	subscript 2 (U+2082)
@@ -127,58 +159,33 @@
 \sub9	₉	subscript 9 (U+2089)
 \sube	ₑ	subscript e (U+2091)
 \subs	ₛ	subscript s (U+209B)
-\rarr	→	rightwards arrow (U+2192)
-\larr	←	leftwards arrow (U+2190)
-\mathA	𝐴	math italic A (U+1D434)
-\mathB	𝐵	math italic B (U+1D435)
-\mathC	𝐶	math italic C (U+1D436)
-\mathD	𝐷	math italic D (U+1D437)
-\mathE	𝐸	math italic E (U+1D438)
-\mathF	𝐹	math italic F (U+1D439)
-\mathG	𝐺	math italic G (U+1D43A)
-\mathH	𝐻	math italic H (U+1D43B)
-\mathI	𝐼	math italic I (U+1D43C)
-\mathJ	𝐽	math italic J (U+1D43D)
-\mathK	𝐾	math italic K (U+1D43E)
-\mathL	𝐿	math italic L (U+1D43F)
-\mathM	𝑀	math italic M (U+1D440)
-\mathN	𝑁	math italic N (U+1D441)
-\mathO	𝑂	math italic O (U+1D442)
-\mathP	𝑃	math italic P (U+1D443)
-\mathQ	𝑄	math italic Q (U+1D444)
-\mathR	𝑅	math italic R (U+1D445)
-\mathS	𝑆	math italic S (U+1D446)
-\mathT	𝑇	math italic T (U+1D447)
-\mathU	𝑈	math italic U (U+1D448)
-\mathV	𝑉	math italic V (U+1D449)
-\mathW	𝑊	math italic W (U+1D44A)
-\mathX	𝑋	math italic X (U+1D44B)
-\mathY	𝑌	math italic Y (U+1D44C)
-\mathZ	𝑍	math italic Z (U+1D44D)
-\matha	𝑎	math italic a (U+1D44E)
-\mathb	𝑏	math italic b (U+1D44F)
-\mathc	𝑐	math italic c (U+1D450)
-\mathd	𝑑	math italic d (U+1D451)
-\mathe	𝑒	math italic e (U+1D452)
-\mathf	𝑓	math italic f (U+1D453)
-\mathg	𝑔	math italic g (U+1D454)
-\mathh	𝘩	math italic h ((U+1D629))
-\planckcons	𝘩	Plank Constant 𝘩 ((U+1D629))
-\mathi	𝑖	math italic i (U+1D456)
-\mathj	𝑗	math italic j (U+1D457)
-\mathk	𝑘	math italic k (U+1D458)
-\mathl	𝑙	math italic l (U+1D459)
-\mathm	𝑚	math italic m (U+1D45A)
-\mathn	𝑛	math italic n (U+1D45B)
-\matho	𝑜	math italic o (U+1D45C)
-\mathp	𝑝	math italic p (U+1D45D)
-\mathq	𝑞	math italic q (U+1D45E)
-\mathr	𝑟	math italic r (U+1D45F)
-\maths	𝑠	math italic s (U+1D460)
-\matht	𝑡	math italic t (U+1D461)
-\mathu	𝑢	math italic u (U+1D462)
-\mathv	𝑣	math italic v (U+1D463)
-\mathw	𝑤	math italic w (U+1D464)
-\mathx	𝑥	math italic x (U+1D465)
-\mathy	𝑦	math italic y (U+1D466)
-\mathz	𝑧	math italic z (U+1D467)
+\sup(	⁽	superscript left parenthesis (U+207D)
+\sup)	⁾	superscript right parenthesis (U+207E)
+\sup+	⁺	superscript plus sign (U+207A)
+\sup-	⁻	superscript minus sign (U+207B)
+\sup0	⁰	superscript 0 (U+2070)
+\sup1	¹	superscript 1 (U+00B9)
+\sup2	²	superscript 2 (U+00B2)
+\sup3	³	superscript 3 (U+00B3)
+\sup4	⁴	superscript 4 (U+2074)
+\sup5	⁵	superscript 5 (U+2075)
+\sup6	⁶	superscript 6 (U+2076)
+\sup7	⁷	superscript 7 (U+2077)
+\sup8	⁸	superscript 8 (U+2078)
+\sup9	⁹	superscript 9 (U+2079)
+\supde	ᵈᵉ	superscript small de (for 2nd ordinal in French)
+\supe	ᵉ	superscript small e (for ordinals in French)
+\supi	ⁱ	superscript i (U+2071)
+\supn	ⁿ	superscript n (U+207F)
+\thinspace	 	thin space
+\times	×	multiplication symbol
+\tm	™	trademark symbol
+\width	𝑤	width (geometry)
+\wj	⁠	zero-width joiner (U+200D)
+\x	×	multiplication symbol / vector product
+\yen	¥	yen (U+00A5)
+\zwj	‍	word joiner (U+2060)
+\zwnj	‌	zero-width non-joiner (U+200C)
+\zwsp	​	zero-width space (U+200B)
+\lro	‭	Left-to-Right Override (LRO): U+202D
+\rlo	‮	Right-to-Left Override (RLO): U+202E
