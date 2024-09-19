@@ -1,5 +1,10 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 117_cs0 (2024-09-19)
+
+* Script: Updated `pisa25trend.groovy` to include all mathematical letters and 𝑠̌.
+* Config: Updated autotext shortcuts with `\mathscaron` and `\mathš` to insert 𝑠̌ (and a few other shortcuts).
+
 ## Update 116_cs0 (2024-09-11)
 
 * Script: Updated `utils_import_creds.groovy` to overwrite lines if the imported file contains creds for repos already existing in 'repositories.properties'
