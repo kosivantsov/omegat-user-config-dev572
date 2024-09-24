@@ -1,5 +1,12 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 118_cs0 (2024-09-24)
+
+* Config: Update tag-only pattern to hide also segments contianing only spacing and dash
+* Scripts: Added new scripts to go to next segment with low or high confidence (MTPE)
+* Scritps: Added MTPE scripts shortcuts set (plus renamed the default one as verification)
+* Scripts: Added cli version of some scripts (without gui dialogs)
+
 ## Update 117_cs0 (2024-09-19)
 
 * Script: Updated `pisa25trend.groovy` to include all mathematical letters and 𝑠̌.
