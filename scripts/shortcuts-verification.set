@@ -1,0 +1,15 @@
+#OmegaT Script Set
+#Thu Aug 29 20:22:50 CEST 2024
+11=goto_next_rep_ingrp.groovy
+12=updateConfigBundle.groovy
+title=verification
+1=check_rules.groovy
+2=write_project2excel.groovy
+3=adapt_tags_to_match_target.groovy
+4=strip_bidi_marks.groovy
+5=replace_strip_tags.groovy
+6=strip_html_tags.groovy
+7=replace_with_match_no_tags.groovy
+8=copy_source.groovy
+9=goto_next_filtered_note.groovy
+10=goto_next_rep_inprj.groovy

@@ -1,0 +1,5 @@
+#OmegaT Script Set
+#Thu Aug 29 20:22:50 CEST 2024
+title=mtpe
+8=goto_next_qe_low_conf.groovy
+9=goto_next_qe_high_conf.groovy
