@@ -2,7 +2,7 @@
 
 ## Update 119_cs0 (2024-09-30)
 
-* Scripts: Updated 'pisa25trend.groovy' to replace Math upper case letters with formatted ASCII equivalent (for TAO)
+* Scripts: Updated `pisa25trend.groovy` to replace Math upper case letters with formatted ASCII equivalent (for TAO)
 
 ## Update 118_cs0 (2024-09-24)
 
