@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 119_cs0 (2024-09-30)
+
+* Scripts: Updated `pisa25trend.groovy` to replace Math upper case letters with formatted ASCII equivalent (for TAO)
+
 ## Update 118_cs0 (2024-09-24)
 
 * Config: Update tag-only pattern to hide also segments contianing only spacing and dash
