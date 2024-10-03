@@ -7,3 +7,7 @@
 | # BLABLA BLOCK: 
 
 [xX]{3,}
+
+| # DISALLOWED IN PISA
+
+[{]{1,2}newline[}]{1,2}|<clock>|\[check work icon\]
