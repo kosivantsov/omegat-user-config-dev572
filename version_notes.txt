@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 120_cs0 (2024-10-03)
+
+* Config: Updated flagged patterns with disallowed text in PISA 2025 MS
+
 ## Update 119_cs0 (2024-09-30)
 
 * Scripts: Updated `pisa25trend.groovy` to replace Math upper case letters with formatted ASCII equivalent (for TAO)
