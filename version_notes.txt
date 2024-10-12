@@ -1,5 +1,10 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 121_cs0 (2024-10-12)
+
+* Script: Updated `checkOMTversion.groovy` to the next omegat version (OmegaT-5.7.3_0_3a8399a66)
+* Script: Updated `set_latest_translations.groovy` to handle edits in alternative translations from tm/auto
+
 ## Update 120_cs0 (2024-10-03)
 
 * Config: Updated flagged patterns with disallowed text in PISA 2025 MS
