@@ -11,7 +11,8 @@
  * @edit      2023.11.23: Thomas added condition to discard TMX entries if they are alternative
  * @edit      2023.12.15: Added /tm/auto/next as update tm folder (together with /tm/auto/prev)
  * @edit      2023.12.15: Show dummy file missing error only if the project is not empty (it has batches)
- * @version   0.0.8
+ * @edit      2024.09.20: Enhanced edits in alternative translations from tm/auto
+ * @version   0.1.0
 */
 import org.omegat.core.data.PrepareTMXEntry
 import org.omegat.core.data.TMXEntry
@@ -72,7 +73,8 @@ def gui() {
         numberOfFilesInProject = allFiles.size()
         def txtFiles = new FileNameFinder().getFileNames(sourceDirPath, '**/' + dummyFileName /* includes */, '**/*.xml **/*.html' /* excludes */)
         try {
-            dummyFile = new File(txtFiles[0]) // .absolutePath
+            if (txtFiles[0] == null) dummyFile = new File(sourceDirPath, dummyFileName)
+            else dummyFile = new File(txtFiles[0]) // .absolutePath
             assert dummyFile.getClass() == java.io.File
             if (dummyFile.exists()) {
                 projectFiles = project.getProjectFiles()
@@ -97,22 +99,43 @@ def gui() {
         project.transMemories.each { name, tmx -> 
             name = name.substring(props.getTMRoot().length())
             if (name.startsWith(path_to_prev_tmx_dir) || name.startsWith(path_to_next_tmx_dir)) {
-                // console.println("Importing from " + name)
+                console.println("Importing from " + name)
                 tmx.entries.each { entry ->
                     // see if the entry is alternative (= if it has id)
-                    def isTmxEntryAlternative = entry.otherProperties.findAll  {  it -> it.type == 'id' } // or prev/next
+                    def isTmxEntryAlternative = entry.otherProperties.find { it -> it.type in ['id','file','prev','next','path'] }.asBoolean()
+                    //console.println("Entry ${isTmxEntryAlternative} ${entry.source}")
                     // Search which entry in the project corresponds to the one in the tmx
-                    // Note: to be improved, for the moment it works only with default entries
-                    // and it is not optimized, we should use a cache as in ImportFromAutoTMX
+                    // For default entries, search a non-translated entry with same source
+                    // For alternative entries, search for an entry with exactly same key
                     def inProject = null
-                    project.allEntries.each { pe -> 
-                        def translation = project.getTranslationInfo(pe)
-                        if ((pe.srcText.equals(entry.source))  && (!isTmxEntryAlternative) && (translation == null || translation.defaultTranslation)) inProject = pe; 
-                    }
+                    if (isTmxEntryAlternative)
+                        project.allEntries.each { pe -> 
+                            if (pe.srcText.equals(entry.source)) { // compare pe.key with entry.otherProperties
+                                def isSameKey = true
+                                entry.otherProperties.each { 
+                                    if (it.type == 'id') isSameKey = isSameKey && pe.key.id.equals(it.value);
+                                    if (it.type == 'prev') isSameKey = isSameKey && pe.key.prev.equals(it.value);
+                                    if (it.type == 'next') isSameKey = isSameKey && pe.key.next.equals(it.value);
+                                    if (it.type == 'path') isSameKey = isSameKey && pe.key.path.equals(it.value);
+                                    if (it.type == 'file') isSameKey = isSameKey && pe.key.file.equals(it.value);
+                                }
+                                if (isSameKey) inProject = pe;
+                                //console.println("Entry ${entry.source} ${pe.key} is same = ${isSameKey}")
+                            }
+                        }
+                    else
+                        project.allEntries.each { pe -> 
+                            if (pe.srcText.equals(entry.source)) { // project entry must be either default or not translated
+                                def translation = project.getTranslationInfo(pe)
+                                if (translation == null || translation.defaultTranslation) inProject = pe; 
+                            }
+                        } 
+                    //console.println("Found source entry : ${inProject.entryNum()}")
+                        
                     // Now search is done, if we found something we use it
                     if ((inProject != null) && (entry.source.equals(inProject.srcText))) {
                         def inProjectEntry = project.getTranslationInfo(inProject)
-                        if ((inProjectEntry != null) && (!isTmxEntryAlternative) && (entry.source.equals(inProjectEntry.source))) {
+                        if ((inProjectEntry != null) && (entry.source.equals(inProjectEntry.source))) {
                             long inProjectDate = inProjectEntry.creationDate
                             if (inProjectEntry.changeDate > inProjectEntry.creationDate) {
                                 inProjectDate = inProjectEntry.changeDate
@@ -121,9 +144,9 @@ def gui() {
                             if (entry.changeDate > entry.creationDate) {
                                 inTmxDate = entry.changeDate
                             }
-                            // console.println(entry.source + " " + inTmxDate + " / " + inProjectDate + " => " + (inTmxDate > inProjectDate));
+                            //console.println(entry.source + " " + inTmxDate + " / " + inProjectDate + " => " + (inTmxDate > inProjectDate));
                             if (inTmxDate > inProjectDate) {
-                                project.setTranslation(inProject, entry, true, null) // org.omegat.core.data.TMXEntry.ExternalLinked.xAUTO);
+                                project.setTranslation(inProject, entry, !isTmxEntryAlternative, org.omegat.core.data.TMXEntry.ExternalLinked.xAUTO);
                                 changesMade = true
                                 console.println("Changes made!")
                             }

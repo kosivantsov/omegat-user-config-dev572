@@ -18,7 +18,7 @@ import static org.omegat.util.Platform.*
 
 reqVersion = "5.7.2"
 // reqRevision = "a978d82ee"
-allowedRevisions = ["a978d82ee", "4e7e1433e", "3a8399a66"]
+allowedRevisions = ["a978d82ee", "4e7e1433e", "3a8399a66", "57b1bb571"]
 winURL="https://cat.capstan.be/OmegaT/exe/OmegaT_${reqVersion}_Windows_64_Signed.exe"
 macURL="https://cat.capstan.be/OmegaT/exe/OmegaT_${reqVersion}_Mac.zip"
 
