@@ -2,8 +2,8 @@
  * Usage : Put this script in <ScriptsDir>/project_changed folder. Create a folder if it doesn't exists.
  *
  * @authors     Manuel Souto Pico (based on a wonderful script written by Yu Tang)
- * @version     0.1.0
- * @date        2023.08.31
+ * @version     0.1.1
+ * @date        2024.10.25
  */
 
 import static org.omegat.core.events.IProjectEventListener.PROJECT_CHANGE_TYPE.*
@@ -88,8 +88,7 @@ switch (eventType) {
             [find: /𝑒/, replacement: /<i>e<\/i>/],
             [find: /𝑓/, replacement: /<i>f<\/i>/],
             [find: /𝑔/, replacement: /<i>g<\/i>/],
-            [find: /ℎ/, replacement: /<h>d<\/i>/],
-            [find: /𝘩/, replacement: /<i>h<\/i>/],
+            [find: /[ℎ𝘩]/, replacement: /<i>h<\/i>/],
             [find: /𝑖/, replacement: /<i>i<\/i>/],
             [find: /𝑗/, replacement: /<i>j<\/i>/],
             [find: /𝑘/, replacement: /<i>k<\/i>/],
@@ -110,7 +109,7 @@ switch (eventType) {
             [find: /𝑦/, replacement: /<i>y<\/i>/],
             [find: /𝑦/, replacement: /<i>y<\/i>/],
             [find: /𝑧/, replacement: /<i>z<\/i>/],
-            [find: /<(span|div|p|li|a|strong|em|td|textarea|th)([^>]*)\/>/, replacement: /<$1$2><\/$1>/],
+            [find: /<(span|div|p|li|a|strong|em|td|textarea|th|dummy)([^>]*)\/>/, replacement: /<$1$2><\/$1>/],
             [find: /<(sup|sub)\/>/, replacement: /​/],
             [find: /<(sup|sub)>\s*<\/\1>/, replacement: /​/],
             [find: / /, replacement: /​/]
@@ -138,14 +137,14 @@ def options = [
 
 // replacer as closure
 def replacer = {file ->
-    console.println("Check in: file ${file}")
+    console.println("Checked file ${file}")
     String text = file.getText ENCODING
     // String replaced = text.replaceAll('\r\r+', '\r') // test well!
     String replaced = text
     replacePair.each {replaced = replaced.replaceAll it.find, it.replacement}
     if (text != replaced) {
         file.setText replaced, ENCODING
-        console.println "modified: $file"
+        console.println "!Modified: $file"
         modifiedFiles++
     }
 }
@@ -162,7 +161,7 @@ def reloadProjectOnetime = {
 // do replace
 rootDir.traverse options, replacer
 
-if (modifiedFiles > 0 && eventType == LOAD) {
+if (modifiedFiles > 0) {
     console.println "$modifiedFiles file(s) modified."
     reloadProjectOnetime()
 }
