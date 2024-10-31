@@ -1,5 +1,9 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
+## Update 123_cs0 (2024-10-31)
+
+* Script: Removed `tmx-key-update.groovy` (unneeded and added by mistake)
+
 ## Update 122_cs0 (2024-10-31)
 
 * Script: Updated `pisa25trend.groovy` to fix one typo (ℎ -> d)
