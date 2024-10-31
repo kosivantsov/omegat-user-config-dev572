@@ -106,7 +106,5 @@ def reloadProjectOnetime = {
 rootDir.traverse options, replacer
 
 if (modifiedFiles > 0) {
-    console.println "$modifiedFiles file(s) modified."
-    reloadProjectOnetime()
 }
 

@@ -8,6 +8,7 @@
 * Script: New `pisa25math.groovy` to deal with Math letters in the HELP unit exclusively
 * Script: Updated `pisa25trend.groovy` to remove Math letters substitutions
 * Script: Deleted `pisaconv.groovy` to reduce load and time during compilation
+* Script: Removed `reloadProjectOnetime` in scripts that run on compile
 
 ## Update 121_cs0 (2024-10-12)
 

@@ -152,8 +152,7 @@ def reloadProjectOnetime = {
 // do replace
 rootDir.traverse options, replacer
 
-if (modifiedFiles > 0 && eventType == LOAD) {
+if (modifiedFiles > 0) {
     console.println "$modifiedFiles file(s) modified."
-    reloadProjectOnetime()
 }
 
