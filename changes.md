@@ -4,6 +4,7 @@
 
 * Script: Removed `tmx-key-update.groovy` (unneeded and added by mistake)
 * Script: Updated `updateConfigBundle.groovy`'s name (to remove reference to 5.7.2)
+* Script: Updated `team-project-sync.groovy` to remove all files in the target folder
 
 ## Update 122_cs0 (2024-10-31)
 
