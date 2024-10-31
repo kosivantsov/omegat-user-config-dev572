@@ -109,18 +109,17 @@ def diffDirRemoteLocal(props, String dir) throws Exception {
 	if (VERBOSE) console.println("--- Files to be removed from directory ---");
 	localFiles.removeAll(remoteFiles);
 	
-	if (VERBOSE) {
-		console.println("--- Removing all files in the target directory ---")
-		targetRoot = new File(props.getTargetRoot())
-		targetRoot.eachDir { subDir ->
-			subDir.eachDir {
-				it.eachDir { it.delete() }
-			}
-			subDir.eachFile { it.delete() }
-			subDir.delete()
+	if (VERBOSE) console.println("--- Removing all files in the target directory ---")
+		
+	targetRoot = new File(props.getTargetRoot())
+	targetRoot.eachDir { subDir ->
+		subDir.eachDir {
+			it.eachDir { it.delete() }
 		}
-		targetRoot.eachFile { it.delete() }
+		subDir.eachFile { it.delete() }
+		subDir.delete()
 	}
+	targetRoot.eachFile { it.delete() }
 
 	// def backupDir = new File(projectRoot, BACKUP_DIR);
 	// backupDir.mkdirs();
