@@ -16,7 +16,7 @@ import static org.omegat.core.events.IProjectEventListener.PROJECT_CHANGE_TYPE.*
 import static org.omegat.gui.main.ProjectUICommands.*
 import static org.omegat.util.Platform.*
 
-reqVersion = "5.7.2"
+reqVersion = "5.7.3"
 // reqRevision = "a978d82ee"
 allowedRevisions = ["a978d82ee", "57b1bb571"]
 winURL="https://cat.capstan.be/OmegaT/exe/OmegaT_${reqVersion}_Windows_64_Signed.exe"
@@ -33,7 +33,7 @@ if (eventType == LOAD) {
         org.omegat.util.gui.UIThreadsUtil.executeInSwingThread { projectClose() }
 
         // inform the user 
-        msg="OmegaT 5.7.2 (built by cApStAn) is required.  "
+        msg="OmegaT ${reqVersion} (built by cApStAn) is required.  "
         console.println("== ${title} ==")
         console.println(msg)
         showMessageDialog null, msg, title, INFORMATION_MESSAGE
