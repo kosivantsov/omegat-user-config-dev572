@@ -3,6 +3,7 @@
 ## Update 123_cs0 (2024-10-31)
 
 * Script: Removed `tmx-key-update.groovy` (unneeded and added by mistake)
+* Script: Updated `updateConfigBundle.groovy`'s name (to remove reference to 5.7.2)
 
 ## Update 122_cs0 (2024-10-31)
 
