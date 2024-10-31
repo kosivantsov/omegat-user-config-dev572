@@ -1,10 +1,13 @@
 # OmegaT (v5.7.2/5.7.3) customization
 
-## Update 122_cs0 (2024-10-29)
+## Update 122_cs0 (2024-10-31)
 
 * Script: Updated `pisa25trend.groovy` to fix one typo (ℎ -> d)
 * Script: Updated `pisa25trend.groovy` to prevent self-closing tag 'dummy'
 * Script: Updated `checkOMTversion.groovy` to the next omegat version (OmegaT-5.7.3_0_57b1bb571) -- removed testing interim versions
+* Script: New `pisa25math.groovy` to deal with Math letters in the HELP unit exclusively
+* Script: Updated `pisa25trend.groovy` to remove Math letters substitutions
+* Script: Deleted `pisaconv.groovy` to reduce load and time during compilation
 
 ## Update 121_cs0 (2024-10-12)
 

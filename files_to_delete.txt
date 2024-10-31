@@ -12,6 +12,7 @@ scripts/clear_working_tm.groovy
 scripts/container_assets.groovy
 scripts/FlushUneditedEntriesCLI.groovy
 scripts/project_changed/container_assets.groovy
+scripts/project_changed/pisaconv.groovy
 scripts/project_changed/restore_files_order.groovy
 scripts/project_changed/set_latest_translation.groovy
 scripts/project_changed/utils_rename_project.groovy
