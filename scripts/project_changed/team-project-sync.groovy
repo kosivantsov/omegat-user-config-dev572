@@ -2,9 +2,10 @@
  *
  * @author  Briac Pilpre, Manuel Souto
  * @date    2020-05-12 (creation)
- * @date    2023-01-04 (modification: remove gui and add event type
- * @date    2023-07-17 (modification: make dir generic to accept source, tm, etc.
- * @version 0.3
+ * @date    2023-01-04 (modification: remove gui and add event type)
+ * @date    2023-07-17 (modification: make dir generic to accept source, tm, etc.)
+ * @date    2024.10.31 (modification: remove everything in /target)
+ * @version 0.4
 */
 
 import static org.omegat.core.events.IProjectEventListener.PROJECT_CHANGE_TYPE.*
@@ -107,6 +108,18 @@ def diffDirRemoteLocal(props, String dir) throws Exception {
 
 	if (VERBOSE) console.println("--- Files to be removed from directory ---");
 	localFiles.removeAll(remoteFiles);
+	
+	if (VERBOSE) console.println("--- Removing all files in the target directory ---")
+		
+	targetRoot = new File(props.getTargetRoot())
+	targetRoot.eachDir { subDir ->
+		subDir.eachDir {
+			it.eachDir { it.delete() }
+		}
+		subDir.eachFile { it.delete() }
+		subDir.delete()
+	}
+	targetRoot.eachFile { it.delete() }
 
 	// def backupDir = new File(projectRoot, BACKUP_DIR);
 	// backupDir.mkdirs();
