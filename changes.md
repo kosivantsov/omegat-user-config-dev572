@@ -1,6 +1,6 @@
-# OmegaT (v5.7.2/5.7.3) customization
+# OmegaT (v5.7.3) customization
 
-## Update 124_cs0 (2024-10-31)
+## Update 124_cs0 (2024-11-01)
 
 * Script: Updated `updateConfigBundle.groovy`'s name (to remove reference to 5.7.2)
 * Script: Updated `team-project-sync.groovy` to remove all files in the target folder
