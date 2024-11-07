@@ -181,11 +181,12 @@
 \times	×	multiplication symbol
 \tm	™	trademark symbol
 \width	𝑤	width (geometry)
-\wj	⁠	zero-width joiner (U+200D)
+\wj	⁠	word joiner (U+2060)
 \x	×	multiplication symbol / vector product
 \yen	¥	yen (U+00A5)
-\zwj	‍	word joiner (U+2060)
+\zwj	‍	zero-width joiner (U+200D)
 \zwnj	‌	zero-width non-joiner (U+200C)
 \zwsp	​	zero-width space (U+200B)
+\zwnbsp	﻿	zero-width non-breaking space (U+FEFF)
 \lro	‭	Left-to-Right Override (LRO): U+202D
 \rlo	‮	Right-to-Left Override (RLO): U+202E

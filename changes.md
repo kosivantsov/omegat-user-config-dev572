@@ -1,5 +1,9 @@
 # OmegaT (v5.7.3) customization
 
+## Update 125_cs0 (2024-11-07)
+
+* Config: Fixed word joiner and zero-width joiner shortcuts and added zero-width non-breaking space
+
 ## Update 124_cs0 (2024-11-01)
 
 * Script: Updated `updateConfigBundle.groovy`'s name (to remove reference to 5.7.2)
