@@ -4,6 +4,7 @@
 
 * Config: Fixed word joiner and zero-width joiner shortcuts and added zero-width non-breaking space
 * Config: Added `Ctrl+Alt+A` as shortcut to create alternative translations
+* Config: Removed `∠`from custom tags
 
 ## Update 124_cs0 (2024-11-01)
 
