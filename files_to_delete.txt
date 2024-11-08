@@ -1,6 +1,5 @@
 assets/creds.txt
 assets/step.txt
-MainMenuShortcuts.properties
 plugins/index.php
 plugins/list_files.txt
 plugins/list_paths.txt

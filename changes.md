@@ -1,8 +1,9 @@
 # OmegaT (v5.7.3) customization
 
-## Update 125_cs0 (2024-11-07)
+## Update 125_cs0 (2024-11-08)
 
 * Config: Fixed word joiner and zero-width joiner shortcuts and added zero-width non-breaking space
+* Config: Added `Ctrl+Alt+A` as shortcut to create alternative translations
 
 ## Update 124_cs0 (2024-11-01)
 
