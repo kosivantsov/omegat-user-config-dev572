@@ -97,7 +97,7 @@ ${targetText}</ext_tmx_match_template>
     <search_window_back_to_initial_segment>false</search_window_back_to_initial_segment>
     <search_window_exclude_orphans>true</search_window_exclude_orphans>
     <search_window_file_names>true</search_window_file_names>
-    <segment_properties_notify_props>comment, hasNote, isAlt, isDup</segment_properties_notify_props>
+    <segment_properties_notify_props>hasNote, isAlt, isDup</segment_properties_notify_props>
     <source_font>Dialog</source_font>
     <source_font_size>14</source_font_size>
     <source_lang>en</source_lang>
@@ -125,5 +125,8 @@ ${targetText}</ext_tmx_match_template>
     <always_commit_compile>true</always_commit_compile>
     <view_option_template_active>true</view_option_template_active>
     <tagValidateOnLeave>true</tagValidateOnLeave>
+    <notify_multiple_translations>true</notify_multiple_translations>
+    <notify_comments>false</notify_comments>
+    <notify_notes>true</notify_notes>
   </preference>
 </omegat>

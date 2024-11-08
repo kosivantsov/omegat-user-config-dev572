@@ -5,6 +5,7 @@
 * Config: Fixed word joiner and zero-width joiner shortcuts and added zero-width non-breaking space
 * Config: Added `Ctrl+Alt+A` as shortcut to create alternative translations
 * Config: Removed `∠`from custom tags
+* Config: Flash notes and stop flashing comments (until comments and segments props can be separated)
 
 ## Update 124_cs0 (2024-11-01)
 
