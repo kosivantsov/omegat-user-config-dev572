@@ -5,17 +5,18 @@
  *
  */
 import java.nio.file.*
-console.println("Checking shortcuts")
+import org.omegat.util.StaticUtils
+
 configDir = StaticUtils.getConfigDir()
 os = System.getProperty("os.name")
 if ( os != 'Mac OS X') {
     return
 } else {
-    macMenuShortcuts = configDir + File.separator + MainMenuShortcuts.mac.properties
-    defaultMenuShortcuts = configDir + File.separator + MainMenuShortcuts.properties
+    macMenuShortcuts = configDir + File.separator + 'MainMenuShortcuts.mac.properties'
+    defaultMenuShortcuts = configDir + File.separator + 'MainMenuShortcuts.properties'
     if (new File(macMenuShortcuts).exists()) {
         macMenuShortcutsFile = Paths.get(macMenuShortcuts)
-        defaultMenuShortcutsFile =Paths.get(defaultMenuShortcuts)
+        defaultMenuShortcutsFile = Paths.get(defaultMenuShortcuts)
         Files.move(macMenuShortcutsFile, defaultMenuShortcutsFile, StandardCopyOption.REPLACE_EXISTING)
     }
 }
