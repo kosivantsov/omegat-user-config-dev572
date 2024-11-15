@@ -1,5 +1,10 @@
 # OmegaT (v5.7.3) customization
 
+## Update 126_cs0 (2024-11-15)
+
+* Config: Added Mac-specfic file to have custom shortcuts
+* Script: Added script to rename Mac-specific shortcuts file when running on macOS
+
 ## Update 125_cs0 (2024-11-08)
 
 * Config: Fixed word joiner and zero-width joiner shortcuts and added zero-width non-breaking space
