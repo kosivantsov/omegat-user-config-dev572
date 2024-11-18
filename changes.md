@@ -4,6 +4,7 @@
 
 * Config: Added Mac-specfic file to have custom shortcuts
 * Script: Added script to rename Mac-specific shortcuts file when running on macOS
+* Script: Updated `checkOMTversion.groovy` to allow mac-specific update hash (OmegaT-5.7.3_0_e363cb094) -- released by accident
 
 ## Update 125_cs0 (2024-11-08)
 
