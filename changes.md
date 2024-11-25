@@ -1,5 +1,9 @@
 # OmegaT (v5.7.3) customization
 
+## Update 127_cs0 (2024-11-25)
+
+* Script: Updated `md2html.groovy` script to add underlining using HTML rather than CSS
+
 ## Update 126_cs0 (2024-11-15)
 
 * Config: Added Mac-specfic file to have custom shortcuts
