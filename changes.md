@@ -1,5 +1,10 @@
 # OmegaT (v5.7.3) customization
 
+## Update 128_cs0 (2024-12-05)
+
+* Script: Updated `updateConfigBundle.groovy` to solve encoding issue in Windows 11
+* Config: Added bullet point (U+2022) character, i.e. •, to the autotext shortcuts list
+
 ## Update 127_cs0 (2024-11-28)
 
 * Script: Updated `md2html.groovy` script to add underlining using HTML rather than CSS

@@ -17,6 +17,7 @@
 \base	𝑏	base (geometry)
 \br	<br/>	HTML break element
 \bullet	∙	bullet operator (U+2219)
+\bulletpoint	•	bullet point (U+2022)
 \cent	¢	cent (U+00A2)
 \copyright	©	copyright symbol
 \deg	°	degree
