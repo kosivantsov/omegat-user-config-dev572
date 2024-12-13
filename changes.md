@@ -1,8 +1,13 @@
 # OmegaT (v5.7.3) customization
 
+## Update 130_cs0 (2024-12-13)
+
+* Config: Temporarily removed omegat.prefs
+* Config: Removed BOM from omegat.prefs
+
 ## Update 129_cs0 (2024-12-13)
 
-* Config: Removed BOM from omegat.prefs
+* Faulty -- skipped
 
 ## Update 128_cs0 (2024-12-05)
 
