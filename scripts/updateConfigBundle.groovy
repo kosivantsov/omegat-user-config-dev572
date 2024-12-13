@@ -558,8 +558,10 @@ if (update != 0) {
         bakDir.mkdirs()
         if (bundlePrefFile.exists()) {
             if (localPrefFile.exists()) {
-                bundlePrefs = new XmlSlurper().parse(bundlePrefFile.getText('UTF-8'))
-                localPrefs = new XmlSlurper().parse(localPrefFile.getText('UTF-8'))
+                bundlePrefsText = bundlePrefFile.getText('UTF-8')
+                localPrefsText = localPrefFile.getText('UTF-8')
+                bundlePrefs = new XmlSlurper().parseText(bundlePrefsText.replaceAll(/\uFEFF/, ''))
+                localPrefs = new XmlSlurper().parseText(localPrefsText.replaceAll(/\uFEFF/, ''))
                 bundleMap = bundlePrefs.preference.children().collectEntries {n->[(n.name()):(n.text())]}
                 localMap = localPrefs.preference.children().collectEntries {n->[(n.name()):(n.text())]}
                 bundleMap.each {
