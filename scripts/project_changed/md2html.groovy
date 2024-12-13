@@ -52,7 +52,7 @@ switch (eventType) {
         replacePair = [
             [find: /(?<![*])\*\*(?![*])([^*\n]+)(?<![*])\*\*(?![*])/,   replacement: /<b>$1<\/b>/],
             [find: /(?<![_])__(?![_])([^_\n]+)(?<![_])__(?![_])/,       replacement: /<i>$1<\/i>/],
-            [find: /(?<![\^])\^\^(?![\^])([^^]+)(?<![\^])\^\^(?![\^])/, replacement: /<u>$1<\/u>/]
+            [find: /(?<![\^])\^\^(?![\^])([^^]+)(?<![\^])\^\^(?![\^])/, replacement: /<span style="text-decoration:underline">$1<\/span>/]
             // [find: /([=×]) π (×)/, replacement: /$1 <m:math xmlns:m="http:\/\/www.w3.org\/1998\/Math\/MathML"><m:semantics><m:mstyle displaystyle="true" scriptlevel="0"><m:mrow class="MJX-TeXAtom-ORD"><m:mi>π<\/m:mi><\/m:mrow><\/m:mstyle><m:annotation encoding="latex">\pi<\/m:annotation><\/m:semantics><\/m:math> $2/]
             // [find: / π/, replacement: / <m:math xmlns:m="http:\/\/www.w3.org\/1998\/Math\/MathML"><m:semantics><m:mstyle displaystyle="true" scriptlevel="0"><m:mrow class="MJX-TeXAtom-ORD"><m:mi>π<\/m:mi><\/m:mrow><\/m:mstyle><m:annotation encoding="latex">\pi<\/m:annotation><\/m:semantics><\/m:math>/]
         ]
