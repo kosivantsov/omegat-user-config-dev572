@@ -4,6 +4,7 @@
 
 * Config: Temporarily removed omegat.prefs
 * Config: Removed BOM from omegat.prefs
+* Script: Updated `md2html.groovy` script to add underlining style directly with CSS classes
 
 ## Update 129_cs0 (2024-12-13)
 
