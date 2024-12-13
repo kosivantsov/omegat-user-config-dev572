@@ -1,5 +1,9 @@
 # OmegaT (v5.7.3) customization
 
+## Update 129_cs0 (2024-12-13)
+
+* Config: Removed BOM from omegat.prefs
+
 ## Update 128_cs0 (2024-12-05)
 
 * Script: Updated `updateConfigBundle.groovy` to solve encoding issue in Windows 11
