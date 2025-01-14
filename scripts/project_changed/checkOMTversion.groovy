@@ -2,10 +2,11 @@
  * 
  * @author:  Kos Ivantsov
  * @date:    2024-02-12
- * @version: 0.2.2
+ * @version: 0.2.3
  * @changed: Manuel 2024-02-20 -- fixed matching regex, changed order of actions (close, then prompt)
  * @changed: Manuel 2024-04.24 -- remove open project / project name and event type checks to run in any case
  * @changed: Manuel 2024-06-27 -- add a list of allowed revisions (rather than unique version)
+ * @changed: Kos    2025-01014 -- close the project only after the user has been informed
  */
 
 import java.awt.Desktop
@@ -30,14 +31,16 @@ if (eventType == LOAD) {
     if (!(allowedRevisions.contains(OStrings.REVISION))) {
         
         // close the project, first of all
-        org.omegat.util.gui.UIThreadsUtil.executeInSwingThread { projectClose() }
+        //org.omegat.util.gui.UIThreadsUtil.executeInSwingThread { projectClose() }
 
         // inform the user 
-        msg="OmegaT ${reqVersion} (built by cApStAn) is required.  "
+        msg="OmegaT ${reqVersion} (built by cApStAn) is required."
         console.println("== ${title} ==")
         console.println(msg)
         showMessageDialog null, msg, title, INFORMATION_MESSAGE
         openURL = true
+        // close the project
+        projectClose()
     } else {
         console.println("== ${title} ==")
         console.println("OmegaT version ${OStrings.VERSION} (${OStrings.REVISION})")
